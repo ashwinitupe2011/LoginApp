@@ -1,1 +1,54 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->
+<ion-menu side="left" [content]="content">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>HIS App</ion-title>
+            </ion-toolbar>
+        </ion-header>        
+        <ion-content>
+                <div class="imageBack">
+                    
+                     <a href="" style="text-decoration: none;border:1px;">
+                         <br>
+                         <p class="userName">Karan K</p>
+                         <p class="userEmail">KaranK@gmail.com</p>
+                         <p class="userEmail">PH000607</p>
+                     </a>
+   </div>
+   <div class="list">
+
+            <ion-list>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    Home
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    Create Appointment
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    View Reports
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    View Prescription
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    Appointmnet Summary
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                   Profile
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/icon/favicon.ico" width="30px" />     
+                    Logout
+                </ion-item>
+            </ion-list>
+            </div>
+        </ion-content>
+    </ion-menu>
+    
+    <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
