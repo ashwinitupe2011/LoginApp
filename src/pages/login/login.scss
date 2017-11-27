@@ -1,0 +1,84 @@
+page-login {
+ 
+  .login-content {
+    background: #ffffff;
+ 
+    .logo-row {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+ 
+    .login-box {
+      background: #F5F5F5;
+      // padding: 20px 20px 0px 20px;
+      margin-top: 30px;
+      box-shadow: 5px 5px 5px 5px #c4c4c4;
+    }
+ 
+    ion-row {
+       align-items: center;
+       text-align: center;
+     }
+ 
+     ion-item {
+        //  border-radius: 30px !important;
+         padding-left: 10px !important;
+         padding-right: 10px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border-bottom: 1px !important;
+         border-bottom-color: rgb(104, 187, 219);
+         box-shadow: none !important;
+         text-anchor: middle;
+     }
+ 
+     .item-input.input-has-focus::after{
+      border-bottom-color: #387ef5;
+    }
+    
+     .signup-col {
+       margin: 0px 16px 0px 16px;
+       padding-bottom: 10px;
+       border-color: #c4c4c4;
+     }
+    
+ 
+     .submit-btn {
+       background: #778899;
+       border-radius: 0px !important;
+       border: 1px solid #ffffff;
+     }
+ 
+     .register-btn {
+       color: #387ef5;
+       background: #F5F5F5;
+       width: 100%;
+       border:1px #c4c4c4;
+       font-size: 1.0em;
+       padding-right: 10px;
+       font-style: italic;
+       text-align: end
+     }
+     .signup-btn {
+      color: #387ef5;
+      text-align: start;
+      width: 100%;
+      padding-left: 10px;
+      font-size: 1.0em;
+    }
+
+    .forgot-btn {
+      color: #387ef5;
+      text-align: end;
+      vertical-align: bottom;
+      // width: 100%;
+      padding-left: 10px;
+      font-size: 1.0em;
+    }
+     .ion-select
+     {
+       height: 60px;
+     }
+  }
+ 
+}
