@@ -28,22 +28,36 @@ ion-title {
   }
 
   .imageBack{
+<<<<<<< HEAD
     height: 25%;
     width: 100%;
     background-color: #0387ec;
     padding-left:4%;
+=======
+    height: 180px;
+    width: 100%;
+    background-color: #0387ec;
+    padding-top: 40px;
+    padding-left:35px;
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
     background-size: cover;
   }
 
   .userName{
   line-height: 12px;
+<<<<<<< HEAD
   font-size: 18px;
+=======
+  font-size: 20px;
+  align-content: center;
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
   text-align: left;
   color:white;
   }
   .userEmail
   {
     line-height: 10px;
+<<<<<<< HEAD
     font-size: 12px;
     color:white;
   }
@@ -61,3 +75,8 @@ ion-title {
   .label-ios {
     margin: 5px 5px 5px 0;
 }
+=======
+    font-size: 14px;
+    color:white;
+  }
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529

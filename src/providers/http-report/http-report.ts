@@ -17,5 +17,8 @@ export class HttpReportProvider {
   getJsonData(){
     return this.http.get('https://www.reddit.com/r/worldnews/.json').map(res => res.json());
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
 }

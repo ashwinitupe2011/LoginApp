@@ -1,5 +1,6 @@
 page-lab-report-types {
     .rcorners2 {
+<<<<<<< HEAD
         border: 1px solid rgb(182, 184, 179);
         border-radius: 15px;
         // transition: 0.3s;
@@ -28,5 +29,14 @@ page-lab-report-types {
         text-align: center;
         -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+=======
+        border: 2px solid rgb(182, 184, 179);
+        border-radius: 15px;
+        transition: 0.3s;
+        margin-bottom: 15px;
+        padding: 20px; 
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
     }
 }

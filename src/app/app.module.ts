@@ -8,10 +8,13 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
+<<<<<<< HEAD
 
 // import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types';
 // import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types'
 
+=======
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
 
 @NgModule({
   declarations: [

@@ -31,6 +31,7 @@ page-login {
          box-shadow: none !important;
          text-anchor: middle;
      }
+<<<<<<< HEAD
 
      item-ios {
       padding-left: 10px !important;
@@ -42,6 +43,8 @@ page-login {
       box-shadow: none !important;
       text-anchor: middle;
   }
+=======
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
  
      .item-input.input-has-focus::after{
       border-bottom-color: #387ef5;
@@ -55,8 +58,14 @@ page-login {
     
  
      .submit-btn {
+<<<<<<< HEAD
        background: #387ef5;
        border-radius: 0px !important;
+=======
+       background: #778899;
+       border-radius: 0px !important;
+       border: 1px solid #ffffff;
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
      }
  
      .register-btn {

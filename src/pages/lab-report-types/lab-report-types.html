@@ -36,6 +36,7 @@
   </ion-list>
 </ion-content> -->
 
+<<<<<<< HEAD
 <!-- <ion-content padding>
     <ion-list text-wrap >
       <ion-item  class="rcorners2"  >Radilology</ion-item>
@@ -64,3 +65,19 @@
     </ion-content>
 
   
+=======
+<ion-content padding>
+  
+    <ion-list  >
+      <ion-item class="rcorners2"  (click)="goToLabReportType()" text-wrap *ngFor="let item of newsData" >
+          <label style="float: left">Test Parameter : </label>
+        <p>{{item.data.title}}</p>
+        <label  style="float: left" >Test Value : </label>
+        <p>{{item.data.domain}}</p>
+  
+        <label  style="float: left">Test Normal Range : </label>
+        <p>{{item.data.domain}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+>>>>>>> 8783f343de348a27c314b02d8a44bdfc24dff529
