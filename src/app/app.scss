@@ -28,24 +28,36 @@ ion-title {
   }
 
   .imageBack{
-    height: 180px;
+    height: 25%;
     width: 100%;
     background-color: #0387ec;
-    padding-top: 40px;
-    padding-left:35px;
+    padding-left:4%;
     background-size: cover;
   }
 
   .userName{
   line-height: 12px;
-  font-size: 20px;
-  align-content: center;
+  font-size: 18px;
   text-align: left;
   color:white;
   }
   .userEmail
   {
     line-height: 10px;
-    font-size: 14px;
+    font-size: 12px;
     color:white;
   }
+
+  .label-md {
+    margin: 5px 5px 5px 0;
+  }
+
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .label-ios {
+    margin: 5px 5px 5px 0;
+}

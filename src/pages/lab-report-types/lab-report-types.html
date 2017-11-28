@@ -36,9 +36,31 @@
   </ion-list>
 </ion-content> -->
 
-<ion-content padding>
+<!-- <ion-content padding>
     <ion-list text-wrap >
       <ion-item  class="rcorners2"  >Radilology</ion-item>
       <ion-item  class="rcorners2" (click)="goToLabReports()">Laboratory</ion-item>
   </ion-list>
-  </ion-content>
+  </ion-content> -->
+
+  <ion-content class="cards-bg">
+    
+    <ion-card>
+    
+      <ion-card-content>
+        Radilology
+      </ion-card-content>
+    
+    </ion-card>
+
+    <ion-card (click)="goToLabReports()">
+      
+        <ion-card-content>
+          Laboratory
+        </ion-card-content>
+      
+      </ion-card>
+    
+    </ion-content>
+
+  

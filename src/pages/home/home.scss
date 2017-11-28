@@ -31,7 +31,7 @@
     width: 100%;
     font-weight: bold;
     height: 40%;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 30px;
     text-align: center;
   }
@@ -39,13 +39,26 @@
   .toolbar-title-md
   {
     padding: 0 12px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #fff;
   }
   .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color: #fff;
     background-color: transparent;
+}
+
+.toolbar-title-ios {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  pointer-events: auto;
+}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+  color: #fff;
+  background-color: transparent;
 }
 
 // .imageBack {

@@ -1,0 +1,63 @@
+{
+    "Msg":"ReportList",
+"SuccessFlag":true,
+"data":{
+    "ReportList":[
+        {
+            "ReportDate":"09 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201761
+                }
+            ]
+        },
+        {
+            "ReportDate":"10 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201762
+                }
+            ]
+        },
+        {
+            "ReportDate":"13 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201766
+                },
+                {
+                    "LabNo":201767
+                }
+            ]
+        },
+        {
+            "ReportDate":"14 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201768
+                },
+                {
+                    "LabNo":201769
+                }
+            ]
+        },
+        {
+            "ReportDate":"15 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201770
+                }
+            ]
+        },
+        {
+            "ReportDate":"16 Nov 2017",
+            "List":[
+                {
+                    "LabNo":201772
+                }
+            ]
+        }
+    ]
+}
+
+}

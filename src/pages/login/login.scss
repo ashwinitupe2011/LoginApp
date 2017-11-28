@@ -31,6 +31,17 @@ page-login {
          box-shadow: none !important;
          text-anchor: middle;
      }
+
+     item-ios {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      border-bottom: 1px !important;
+      border-bottom-color: rgb(29, 178, 233);
+      box-shadow: none !important;
+      text-anchor: middle;
+  }
  
      .item-input.input-has-focus::after{
       border-bottom-color: #387ef5;
@@ -44,9 +55,8 @@ page-login {
     
  
      .submit-btn {
-       background: #778899;
+       background: #387ef5;
        border-radius: 0px !important;
-       border: 1px solid #ffffff;
      }
  
      .register-btn {
