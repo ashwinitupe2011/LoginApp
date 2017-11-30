@@ -1,0 +1,45 @@
+page-lab-report-dates {
+    .accordion-list {
+        background: #fff;
+        height: 100%;
+    }
+    .section {
+        background: #fff;
+        color: #000;
+        margin-bottom: 4px;
+    }
+    .section-active {
+        background:color($colors, dark); ;
+        color: #fff;
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 30%;
+    }
+ 
+
+    .card-md {
+        margin: 10px;
+        border-radius: 10px;
+        width: calc(100% - 20px);
+        font-size: 1.3rem;
+        text-align: center;
+        background: #fff;
+        -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .card-ios{
+        margin: 10px;
+        border-radius: 10px;
+        width: calc(100% - 20px);
+        font-size: 1.3rem;
+        background: #fff;
+        text-align: center;
+        -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+}

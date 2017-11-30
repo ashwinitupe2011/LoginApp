@@ -1,0 +1,54 @@
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->
+<ion-menu side="left" [content]="content">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>HIS App</ion-title>
+            </ion-toolbar>
+        </ion-header>        
+        <ion-content>
+                <div class="imageBack">
+                    
+                     <a href="" style="text-decoration: none;border:1px;">
+                         <br>
+                         <p class="userName">Karan K</p>
+                         <p class="userEmail">KaranK@gmail.com</p>
+                         <p class="userEmail">PH000607</p>
+                     </a>
+   </div>
+   <div class="list">
+
+            <ion-list class="label-md">
+                <ion-item  (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/icon.png" width="10%" />     
+                    Home
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/appointment_icon.png" width="10%" />     
+                    Create Appointment
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/medical_report_icon.png" width="10%" />     
+                    View Reports
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/prescription_icon.png" width="10%" />     
+                    View Prescription
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/summary.png" width="10%" />     
+                    Appointmnet Summary
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/user.png" width="10%" />     
+                   Profile
+                </ion-item>
+                <ion-item (click)="go_to_home()" menuClose>   
+                        <img src="assets/imgs/drawer_imgs/logout.png" width="10%" />     
+                    Logout
+                </ion-item>
+            </ion-list>
+            </div>
+        </ion-content>
+    </ion-menu>
+    
+    <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
