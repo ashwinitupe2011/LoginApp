@@ -56,7 +56,7 @@
             <ion-item *ngFor="let s of p.List;let j = index" text-wrap >
               <ion-card>
 
-                <ion-card-content (click)="getLabNumber(j)">
+                <ion-card-content (click)="getLabNumber(s.LabNo)">
                   {{s.LabNo}}
                   </ion-card-content>
                   </ion-card>

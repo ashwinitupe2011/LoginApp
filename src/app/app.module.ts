@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
+import { HttpReportProvider } from '../providers/http-report/http-report';
 
 // import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types';
 // import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types'
@@ -19,11 +20,13 @@ import { ProfilePage } from '../pages/profile/profile'
     LoginPage,
     ProfilePage,
     // LabReportTypesPage
+    
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp)
+ 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +38,8 @@ import { ProfilePage } from '../pages/profile/profile'
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpReportProvider
   ]
 })
 export class AppModule {}

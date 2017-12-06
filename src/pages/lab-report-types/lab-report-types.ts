@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController,LoadingController } from 'ionic-angular';
 import { HttpReportProvider } from '../../providers/http-report/http-report';
 
-
-
 /**
  * Generated class for the LabReportTypesPage page.
  *
@@ -22,32 +20,25 @@ export class LabReportTypesPage {
   newInfo : any;
   loading: any;
 
-  constructor(public navCtrl: NavController,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController,public loadingCtrl: LoadingController,public httpReportProvider :HttpReportProvider) {
     
         this.loading = this.loadingCtrl.create({
           content: `
-          <ion-spinner ></ion-spinner>`
+          // <ion-spinner ></ion-spinner>`
         });
     
-        // this.getdata();
+          this.getdata();
       }
-      // getdata(){
-      //   this.loading.present();
-      //   this.httpProvider.getJsonData().subscribe(
-      //     result => {
-      //       this.newsData=result.data.children;
-      //       this.newInfo = result.data.children.kind;
-      //       console.log("Success : "+this.newsData);
-      //     },
-      //     err =>{
-      //       console.error("Error : "+err);
-      //     } ,
-      //     () => {
-      //       this.loading.dismiss();
-      //       console.log('getData completed');
-      //     }
-      //   );
-      // }
+      getdata(){
+        // this.loading.present();
+        this.httpReportProvider.getJsonData().subscribe(
+          result => {
+            console.log("Success : "+result);
+          },
+          err =>{
+            console.error("Error : "+err);
+          });
+      }
 
       goToLabReports()
       {

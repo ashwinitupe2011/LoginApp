@@ -25,7 +25,46 @@ export class LabReportDatesPage {
       console.log(this.information)
     })
 
-    console.log("sdj")
+    // this.callPostData()
+    // console.log("sdj")
+  }
+
+  callPostData()
+  {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
+     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100');
+     headers.append('Access-Control-Allow-Origin', '*');
+     headers.append('Access-Control-Allow-Credentials', 'true');
+
+    let options = new RequestOptions({method:"POST",headers:headers})
+  
+    let data = JSON.stringify({
+      request:"userLoginRequest",
+      userPassword:"abc",
+    userID:"ph000700",
+    userType:4,
+    unitNo:1,
+    unique_token:123456
+    })
+
+    this.http.post(' http://192.168.2.185/WebAPI/api/Login',data,options)
+    .map(res => res.json())
+    .subscribe(res =>
+    {
+      alert("success");
+      console.log(res);
+    },
+  (err) =>{
+    alert("fail")
+  });
+  }
+  getLabNumber(j)
+  {
+    console.log(j);
+    // this.navCtrl.setRoot('LabReportDatesPage');
   }
 
 
