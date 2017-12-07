@@ -10,17 +10,12 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
 import { HttpReportProvider } from '../providers/http-report/http-report';
 
-// import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types';
-// import { LabReportTypesPage } from '../pages/lab-report-types/lab-report-types'
-
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    ProfilePage,
-    // LabReportTypesPage
-    
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -32,8 +27,7 @@ import { HttpReportProvider } from '../providers/http-report/http-report';
   entryComponents: [
     MyApp,
     LoginPage,
-    ProfilePage,
-   
+    ProfilePage
   ],
   providers: [
     StatusBar,

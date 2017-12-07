@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ReportDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+      <ion-title>Lab Report Summary</ion-title>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+
+
+  <ion-content>
+    <ion-list class="accordion-list">
+
+        <ion-list-header  *ngFor="let p of labSummary; let i = index"  no-padding>
+
+          <button detail-none (click)="sectionToggle(i)" class="section-active">
+              <ion-icon item-left name="arrow-forward" *ngIf="!p.open"></ion-icon>
+              <ion-icon item-left name="arrow-down" *ngIf="p.open"></ion-icon>
+        {{p.TestName}}
+      </button>
+        <ion-list  *ngIf="p.TestName && p.open" no-lines>
+          <ion-item *ngFor="let s of p.List;let j = index" text-wrap >
+            <ion-card>
+
+              <!-- <ion-card-content>  -->
+                    <ion-item>Test Parameter : {{s.ParamName}} </ion-item>
+                    <ion-item>Test Value : {{s.Result}} </ion-item>
+                    <ion-item>Test Normal Range : {{s.ParamNormalRange}} </ion-item>
+
+                <!-- </ion-card-content> -->
+                </ion-card>
+
+          </ion-item>
+        </ion-list>
+        </ion-list-header>
+    </ion-list>
+  </ion-content>

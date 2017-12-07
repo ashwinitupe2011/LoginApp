@@ -61,3 +61,24 @@ ion-title {
   .label-ios {
     margin: 5px 5px 5px 0;
 }
+
+.accordion-list {
+  background: #fff;
+  height: 100%;
+}
+.section {
+  background: #fff;
+  color: #000;
+  margin-bottom: 4px;
+}
+.section-active {
+  background:color($colors, dark); ;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30%;
+}
