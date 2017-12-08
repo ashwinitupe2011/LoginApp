@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map'
-
+import { LabReportDetailsPage } from '../lab-report-details/lab-report-details'
 /**
  * Generated class for the LabReportDatesPage page.
  *
@@ -53,18 +53,16 @@ export class LabReportDatesPage {
     .subscribe(res =>
     {
       this.information = res;
-      alert("success");
       console.log(res);
     },
   (err) =>{
-    alert("fail")
   });
   }
-  getLabNumber(j)
+  getLabNumber(labNumber,reportDate)
   {
-    console.log(j);
-    alert("sdkxjc");
-    this.navCtrl.setRoot('ReportDetailsPage' );
+    console.log(labNumber);
+    console.log(reportDate);
+    this.navCtrl.setRoot(LabReportDetailsPage,{labNumber:labNumber,reportDate:reportDate});
   }
 
 
@@ -73,41 +71,9 @@ export class LabReportDatesPage {
     console.log(i)
     this.information[i].open = ! this.information[i].open;
   }
-  // itemToggle(i,j)
-  // {
-  //   this.information[i].List[j].open = !this.information[i].List[j].open;
-  // }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LabReportDatesPage');
   }
-  // toggleSection(i) {
-  //   this.information[i].open = !this.information[i].open;
-  // }
- 
-  // toggleItem(i, j) {
-  //   this.information[i].List[j].open = !this.information[i].List[j].open;
-  // }
+
 }
-//   postRequest() {
-//     var headers = new Headers();
-//     // headers.append("Accept", 'application/json');
-//     headers.append('Content-Type', 'application/json' );
-//     // let options = new RequestOptions({ headers: headers });
-    
-// let params = JSON.stringify(
-// {'GetPasswordRecoveryRequest':
-// {
-//     'EmailAddress':"karan@gmail.com"
-// }
-// })
-
-// alert(params);
-
-//     this.http.post("http://192.168.2.185/WebAPI/api/Password", params, headers)
-//       .subscribe(data => {
-//         console.log(data['_body']);
-//        }, error => {
-//         console.log("error",error);// Error getting the data
-//       });
-//   }
-

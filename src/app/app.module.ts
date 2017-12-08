@@ -9,13 +9,14 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
 import { HttpReportProvider } from '../providers/http-report/http-report';
-
+import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-details'
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    ProfilePage
+    ProfilePage,
+    LabReportDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import { HttpReportProvider } from '../providers/http-report/http-report';
   entryComponents: [
     MyApp,
     LoginPage,
-    ProfilePage
+    ProfilePage,
+    LabReportDetailsPage
   ],
   providers: [
     StatusBar,
