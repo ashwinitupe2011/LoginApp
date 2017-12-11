@@ -75,5 +75,4 @@ export class LabReportDatesPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LabReportDatesPage');
   }
-
 }

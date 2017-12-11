@@ -27,6 +27,7 @@
     "@ionic/storage": "2.0.1",
     "cordova-android": "6.3.0",
     "cordova-browser": "5.0.1",
+    "cordova-plugin-app-preferences": "^0.99.3",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^4.0.3",
@@ -49,7 +50,8 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {}
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-app-preferences": {}
     },
     "platforms": [
       "android",

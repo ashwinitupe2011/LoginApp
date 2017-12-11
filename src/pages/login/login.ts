@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, Loading, IonicPage } from 'ionic-angular';
-
+import { Http, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/map'
 
 /**
  * Generated class for the LoginPage page.
@@ -17,23 +18,46 @@ import { NavController, LoadingController, Loading, IonicPage } from 'ionic-angu
 export class LoginPage {
 
   loading : Loading;
-  registerCredentials = { email: '', password: '' };
 
-  constructor(public navCtrl: NavController, private loadingCtrl: LoadingController) { 
-    
+
+  constructor(public navCtrl: NavController, private loadingCtrl: LoadingController ,private http: Http) { 
+    // this.callLogin()
   }
 
-  public createAccount()
-  {
-   
-  }
+  // callLogin()
+  // {
+  //   let headers = new Headers();
+  //   headers.append('Content-Type', 'application/json');
+  //   headers.append('Accept', 'application/json');
 
-  GotoHomePage()
-  {
-    this.navCtrl.setRoot('HomePage');
-  }
-
+  //   let options = new RequestOptions({method:"POST",headers:headers})
   
+  //   let data = JSON.stringify(
+  //     {unitNo:1,
+  //       request:"GetReportParameterList",
+  //     unique_token:123456,
+  //     patientID:4681,
+  //   }
+  //   )
+
+  //   console.log(data);
+
+  //   this.http.post('http://192.168.2.185/WebAPI/api/GetReportDetails',data,options)
+  //   .map(res => res.json().data.TestNameList)
+  //   .subscribe(res =>
+  //   {
+  //     this.labSummary = res;
+  //     console.log(res);
+  //   },
+  // (err) =>{
+  // });
+  // }
+
+  GotoHomePage(username,password)
+  {
+    console.log(username,password);
+    // this.navCtrl.setRoot('HomePage');
+  }
 
   public login()
   {
@@ -41,7 +65,15 @@ export class LoginPage {
     this.navCtrl.setRoot('HomePage');
   }
 
+  signuUpFunction()
+  {
+    console.log("Signup")
+  }
 
+  forgotPasswordFunction()
+  {
+    console.log("Forgot Password")
+  }
   // public showError(text)
   // {
   //   this.loading.dismiss();
