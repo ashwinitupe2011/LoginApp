@@ -42,9 +42,18 @@
 
 
    <ion-content>
-      <ion-list class="accordion-list">
+      <!-- <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      ng-focus="searchFocused = true"
+      ng-blur="searchFocused = false"
+      placeholder="Search by lab number"
+      >
+    </ion-searchbar> -->
 
-        
+    <ion-img width="10%" height="10%" item-end src="assets/img/analytics.png"></ion-img>
+
+      <ion-list class="accordion-list">
           <ion-list-header  *ngFor="let p of information; let i = index"  no-padding>
 
             <button detail-none (click)="sectionToggle(i)" class="section-active">
