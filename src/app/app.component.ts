@@ -11,6 +11,10 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   rootPage:any = LoginPage;
+  patientName:string;
+  patientRegistrationNo:string;
+  patientEmailId:string;
+  
   @ViewChild(Nav) nav: Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -19,12 +23,29 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      if(!window.localStorage.getItem('PatientId'))
+      {
+          console.log("get")
+      }
+      else
+      {
+        console.log("jjj")
+      }
+
+      this.getData()
     });
   }
-  
-  go_to_about(){
-    this.nav.setRoot(LoginPage);  
+
+  getData()
+  {
+         this.patientName=window.localStorage.getItem('PatientName');
+         this.patientRegistrationNo=window.localStorage.getItem('RegistrationNo');
+         this.patientEmailId=window.localStorage.getItem('patientEmailID');
+
+         console.log(this.patientEmailId)
+         console.log(this.patientRegistrationNo)
+         console.log(this.patientName)
   }
- 
 }
 

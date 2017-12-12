@@ -11,7 +11,8 @@ page-login {
     .login-box {
       background: #F5F5F5;
       // padding: 20px 20px 0px 20px;
-      margin-top: 30px;
+      margin-top: 3%;
+      width: 100%;
       box-shadow: 5px 5px 5px 5px #c4c4c4;
     }
  
@@ -34,7 +35,7 @@ page-login {
      .label-md[floating] {
       margin-left: 3%;
       margin-bottom: 0;
-      color: rgb(148, 22, 231);
+      // color: rgb(148, 22, 231);
     }
     
     .item-label-stacked .text-input-md,
@@ -105,8 +106,11 @@ page-login {
      }
      .bottomClass
      {
-       margin-top: 40%;
-       margin-bottom: 10%;
+      margin-top: 5%;
+     }
+     .error-message
+     {
+       color: red;
      }
   }
  

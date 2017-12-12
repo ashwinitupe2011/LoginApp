@@ -44,7 +44,7 @@ export class LabReportDetailsPage {
       {unitNo:1,
         request:"GetReportParameterList",
       unique_token:123456,
-      patientID:4681,
+      patientID:window.localStorage.getItem('PatientId'),
       labNo:this.labNumber,
       reportDate:this.reportDate
     }

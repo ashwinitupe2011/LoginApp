@@ -6,15 +6,18 @@
             </ion-toolbar>
         </ion-header>        
         <ion-content>
-                <div class="imageBack">
-                    
-                     <a href="" style="text-decoration: none;border:1px;">
-                         <br>
-                         <p class="userName">Karan K</p>
-                         <p class="userEmail">KaranK@gmail.com</p>
-                         <p class="userEmail">PH000607</p>
+           
+                    <ion-item  class="imageBack" >
+                     <a href="" name="patientName" style="text-decoration: none;border:1px;">
+                         <p>{{patientName}}</p>
+
+                         <!-- <a href="" name="patientRegistrationNo" style="text-decoration: none;border:1px;"> -->
+                            <p name="patientRegistrationNo">{{patientRegistrationNo}}</p>
+                          
+                         <!-- <p name="patientRegistrationNo">{{name}}</p>-->
+                         <p name="patientEmailId" >{{patientEmailId}}</p> 
                      </a>
-   </div>
+                     </ion-item>
    <div class="list">
 
             <ion-list class="label-md">
