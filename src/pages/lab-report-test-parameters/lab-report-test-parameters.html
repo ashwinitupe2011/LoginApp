@@ -16,9 +16,9 @@
               <ion-icon item-left name="arrow-forward" *ngIf="!p.open"></ion-icon>
               <ion-icon item-left name="arrow-down" *ngIf="p.open"></ion-icon>
         {{p.TestName}}
-        <ion-icon name="star" item-right></ion-icon>
-        <!-- <ion-img src="assets/imgs/line_chart.png"></ion-img> -->
       </button>
+      <button (click)="goToReportGraph()" class="activeImage">
+          <ion-img src="assets/imgs/line_chart.png" ></ion-img></button>
      
         <ion-list  *ngIf="p.TestName && p.open" no-lines>
           <ion-item *ngFor="let s of p.List;let j = index" text-wrap >

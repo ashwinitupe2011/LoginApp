@@ -66,5 +66,10 @@ console.log("json result calling");
   {
     console.log(labNumber);
   }
+
+  goToReportGraph()
+  {
+    console.log("ReportGraph")
+  }
   
 }
