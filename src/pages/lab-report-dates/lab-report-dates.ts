@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map'
 import { LabReportDetailsPage } from '../lab-report-details/lab-report-details'
+import { LabReportTestParametersPage } from '../lab-report-test-parameters/lab-report-test-parameters'
+
 /**
  * Generated class for the LabReportDatesPage page.
  *
@@ -62,7 +64,7 @@ export class LabReportDatesPage {
   {
     console.log(labNumber);
     console.log(reportDate);
-    this.navCtrl.setRoot(LabReportDetailsPage,{labNumber:labNumber,reportDate:reportDate});
+    this.navCtrl.push(LabReportDetailsPage,{labNumber:labNumber,reportDate:reportDate});
   }
 
 
@@ -74,5 +76,11 @@ export class LabReportDatesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LabReportDatesPage');
+  }
+
+  goToReportTest()
+  {
+    console.log("eygsdhkjh")
+    this.navCtrl.push(LabReportTestParametersPage)
   }
 }

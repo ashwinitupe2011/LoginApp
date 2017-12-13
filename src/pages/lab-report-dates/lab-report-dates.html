@@ -50,9 +50,9 @@
       placeholder="Search by lab number"
       >
     </ion-searchbar> -->
-
-    <ion-img width="10%" height="10%" item-end src="assets/img/analytics.png"></ion-img>
-
+  <button class="imageButton" (click)="goToReportTest()">
+      <ion-img src="assets/imgs/analytics.png" ></ion-img>
+    </button>
       <ion-list class="accordion-list">
           <ion-list-header  *ngFor="let p of information; let i = index"  no-padding>
 

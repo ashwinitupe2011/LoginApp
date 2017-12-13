@@ -81,3 +81,12 @@ ion-title {
     font-weight: bold;
     color:color($colors,white-color);
 }
+
+.item-ios p {
+  font-size: 1.4rem;
+  line-height: normal;
+  text-overflow: inherit;
+  color:color($colors,white-color);
+  overflow: inherit;
+  margin: 0px 0px 2px;
+}

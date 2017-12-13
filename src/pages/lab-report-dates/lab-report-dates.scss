@@ -19,4 +19,31 @@ page-lab-report-dates {
         -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
+    .analyticImageClass
+    {
+        width:8%;
+         height:5%;
+         margin: 5px;
+         align-items: right;
+         display: block;
+         contain: none;
+         text-align: right;
+    }
+    .imageButton
+    {
+        display: block;
+        width: 100%;
+        color: transparent;
+        background-color: transparent;
+        text-align: right;
+       padding: 2%;
+    }
+    .ion-img {
+        display: block;
+        min-width: 20px;
+        min-height: 20px;
+        background: transparent;
+        contain: strict;
+        color: transparent;
+      }
 }

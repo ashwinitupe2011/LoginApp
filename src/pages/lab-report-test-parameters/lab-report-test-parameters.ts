@@ -22,4 +22,5 @@ export class LabReportTestParametersPage {
     console.log('ionViewDidLoad LabReportTestParametersPage');
   }
 
+  
 }

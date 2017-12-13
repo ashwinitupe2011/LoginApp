@@ -10,13 +10,15 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
 import { HttpReportProvider } from '../providers/http-report/http-report';
 import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-details'
+import { LabReportTestParametersPage } from '../pages/lab-report-test-parameters/lab-report-test-parameters'
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     ProfilePage,
-    LabReportDetailsPage
+    LabReportDetailsPage,
+    LabReportTestParametersPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-det
     MyApp,
     LoginPage,
     ProfilePage,
-    LabReportDetailsPage
+    LabReportDetailsPage,
+    LabReportTestParametersPage
   ],
   providers: [
     StatusBar,
