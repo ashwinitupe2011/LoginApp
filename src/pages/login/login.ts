@@ -117,20 +117,20 @@ export class LoginPage {
 
       callDataSavePreferences()
       {
-        // if(this.loginResponseFlag)
-        // {
-          // window.localStorage.setItem('PatientId',this.loginResponse[0].PatientId)
-          // window.localStorage.setItem('PatientName',this.loginResponse[0].UserName)
-          // window.localStorage.setItem('patientAge',this.loginResponse[0].Age)
-          // window.localStorage.setItem('patientGender',this.loginResponse[0].Gender)
-          // window.localStorage.setItem('patientEmailID',this.loginResponse[0].EmailID)
-          // window.localStorage.setItem('RegistrationNo',this.loginResponse[0].RegistrationNo)
+        if(this.loginResponseFlag)
+        {
+          window.localStorage.setItem('PatientId',this.loginResponse[0].PatientId)
+          window.localStorage.setItem('PatientName',this.loginResponse[0].UserName)
+          window.localStorage.setItem('patientAge',this.loginResponse[0].Age)
+          window.localStorage.setItem('patientGender',this.loginResponse[0].Gender)
+          window.localStorage.setItem('patientEmailID',this.loginResponse[0].EmailID)
+          window.localStorage.setItem('RegistrationNo',this.loginResponse[0].RegistrationNo)
 
           this.navCtrl.setRoot('HomePage');
-        // }
-        // else{
-        //   this.presentAlert("Login Error","Please check your login credentials")
-        // }
+        }
+        else{
+          this.presentAlert("Login Error","Please check your login credentials")
+        }
       }
       
   public showLoading()

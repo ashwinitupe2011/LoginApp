@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { LabResultGraphPage } from '../lab-result-graph/lab-result-graph'
 /**
  * Generated class for the LabReportTestParametersPage page.
  *
@@ -69,7 +70,8 @@ console.log("json result calling");
 
   goToReportGraph()
   {
-    console.log("ReportGraph")
+    // this.navCtrl.setRoot('LabResultGraphPage');
+    this.navCtrl.setRoot(LabResultGraphPage);
   }
   
 }

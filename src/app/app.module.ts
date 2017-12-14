@@ -10,7 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'
 import { HttpReportProvider } from '../providers/http-report/http-report';
 import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-details'
-// import { LabReportTestParametersPage } from '../pages/lab-report-test-parameters/lab-report-test-parameters'
+import { LabResultGraphPage } from '../pages/lab-result-graph/lab-result-graph'
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-det
     LoginPage,
     ProfilePage,
     LabReportDetailsPage,
+    LabResultGraphPage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -32,6 +33,7 @@ import { LabReportDetailsPage } from '../pages/lab-report-details/lab-report-det
     LoginPage,
     ProfilePage,
     LabReportDetailsPage,
+    LabResultGraphPage
     // LabReportTestParametersPage
   ],
   providers: [
