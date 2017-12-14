@@ -55,7 +55,7 @@ export class LabReportDatesPage {
     .subscribe(res =>
     {
       this.information = res;
-      console.log(res);
+      console.log("REE"+res);
     },
   (err) =>{
   });
