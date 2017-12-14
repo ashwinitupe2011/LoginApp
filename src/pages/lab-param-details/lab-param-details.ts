@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map'
 
 /**
- * Generated class for the LabReportDetailsPage page.
+ * Generated class for the LabParamDetailsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,61 +11,54 @@ import 'rxjs/add/operator/map'
 
 @IonicPage()
 @Component({
-  selector: 'page-lab-report-details',
-  templateUrl: 'lab-report-details.html',
+  selector: 'page-lab-param-details',
+  templateUrl: 'lab-param-details.html',
 })
-export class LabReportDetailsPage {
-  labSummary: any[];
-  labNumber : String;
-  reportDate : String;
+export class LabParamDetailsPage {
+
+  labTestParams : any[];
+  
+  labNumber :string;
+  testName :string;
+  reportDate : string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http) {
-   
     this.labNumber = this.navParams.get('labNumber');
+    this.testName = this.navParams.get('testName');
     this.reportDate = this.navParams.get('reportDate');
-    console.log(this.reportDate);
-    this.callPostData()
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LabReportDetailsPage');
+    console.log('ionViewDidLoad LabParamDetailsPage');
+    this.callGetParamService();
   }
 
-  callPostData()
+  callGetParamService()
   {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
 
     let options = new RequestOptions({method:"POST",headers:headers})
-  
     let data = JSON.stringify(
-      {unitNo:1,
-        request:"GetReportParameterList",
+      {testName:this.testName,
       unique_token:123456,
-      patientID:window.localStorage.getItem('PatientId'),
-      labNo:this.labNumber,
-      reportDate:this.reportDate
+        unitNo:1,
+        request:"GetReportParameterListName",
+        labNo: this.labNumber,
+        reportDate:this.reportDate ,    
+      patientID: window.localStorage.getItem('PatientId')
     }
     )
 
     console.log(data);
-
-    this.http.post('http://192.168.2.185/WebAPI/api/GetReportDetails',data,options)
-    .map(res => res.json().data.TestNameList)
+    this.http.post('http://192.168.2.185/WebAPI/api/ReportParameterListName',data,options)
+    .map(res => res.json().data.List)
     .subscribe(res =>
     {
-      this.labSummary = res;
-      console.log(res);
+      this.labTestParams = res;
     },
   (err) =>{
   });
   }
-
-  sectionToggle(i)
-  {
-    console.log(i)
-    this.labSummary[i].open = ! this.labSummary[i].open;
-  }
-
 }

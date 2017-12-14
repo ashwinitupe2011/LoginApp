@@ -22,14 +22,6 @@ export class LabReportDatesPage {
   information: any[];
   
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http) {
-    // let localData = http.get('assets/report.json').map(res => res.json().data.ReportList);
-    // localData.subscribe(data => {
-    //   this.information = data;
-    //   console.log(this.information)
-    // })
-
-    this.callPostData()
-    console.log("sdj")
   }
 
   callPostData()
@@ -37,9 +29,6 @@ export class LabReportDatesPage {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
-     headers.append('Access-Control-Allow-Origin', '*');
-     headers.append('Access-Control-Allow-Credentials', 'true');
 
     let options = new RequestOptions({method:"POST",headers:headers})
     let data = JSON.stringify(
@@ -76,6 +65,7 @@ export class LabReportDatesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LabReportDatesPage');
+    this.callPostData()
   }
 
   goToReportTest()

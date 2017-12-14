@@ -17,14 +17,14 @@
               <ion-icon item-left name="arrow-down" *ngIf="p.open"></ion-icon>
         {{p.TestName}}
       </button>
-      <button (click)="goToReportGraph()" class="activeImage">
+      <button (click)="goToReportGraph(p.TestName)" class="activeImage">
           <ion-img src="assets/imgs/line_chart.png" ></ion-img></button>
      
         <ion-list  *ngIf="p.TestName && p.open" no-lines>
           <ion-item *ngFor="let s of p.List;let j = index" text-wrap >
             <ion-card>
 
-              <ion-card-content  (click)="callReportDetails(s.LabNo)">
+              <ion-card-content  (click)="callReportDetails(s.LabNo,p.TestName,s.TestDate)">
                 {{s.TestDate}}
                 </ion-card-content>
                 </ion-card>

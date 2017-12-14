@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { LabResultGraphPage } from '../lab-result-graph/lab-result-graph'
+import { LabParamDetailsPage } from '../lab-param-details/lab-param-details'
 /**
  * Generated class for the LabReportTestParametersPage page.
  *
@@ -34,13 +35,9 @@ export class LabReportTestParametersPage {
 
   callTestResult()
   {
-console.log("json result calling");
   let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
-     headers.append('Access-Control-Allow-Origin', '*');
-     headers.append('Access-Control-Allow-Credentials', 'true');
 
     let options = new RequestOptions({method:"POST",headers:headers})
     let data = JSON.stringify(
@@ -63,14 +60,16 @@ console.log("json result calling");
   });
   }
 
-  callReportDetails(labNumber)
+  callReportDetails(labNumber,testName,reportDate)
   {
+    console.log(testName);
     console.log(labNumber);
+    console.log(reportDate);
+    this.navCtrl.setRoot(LabParamDetailsPage,{labNumber:labNumber,reportDate:reportDate,testName:testName});
   }
 
-  goToReportGraph()
+  goToReportGraph(testName)
   {
-    // this.navCtrl.setRoot('LabResultGraphPage');
     this.navCtrl.setRoot(LabResultGraphPage);
   }
   
