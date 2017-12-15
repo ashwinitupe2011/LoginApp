@@ -42,4 +42,10 @@ export class HomePage {
   
     toast.present();
   }
+  
+  goToPrescriptionList()
+  {
+    this.navCtrl.setRoot('PrescriptionListPage');
+  }
+
 }

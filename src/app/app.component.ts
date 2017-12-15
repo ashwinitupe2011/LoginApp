@@ -27,15 +27,30 @@ export class MyApp {
       if(!window.localStorage.getItem('PatientId'))
       {
           console.log("get")
+          this.nav.setRoot(LoginPage);
       }
       else
       {
+        this.nav.setRoot('HomePage')
         console.log("jjj")
       }
 
       this.getData()
     });
   }
+
+  logoutFunction():void
+  {
+    window.localStorage.clear();
+    this.nav.setRoot(LoginPage);
+    console.log("logout")
+  }
+
+  gotoHomePage():void
+  {
+    this.nav.setRoot('HomePage');
+  }
+
 
   getData()
   {

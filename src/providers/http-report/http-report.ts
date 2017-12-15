@@ -15,9 +15,6 @@ export class HttpReportProvider {
     console.log('Hello HttpReportProvider Provider');
   }
   getJsonData(){
-
-    
-
     return this.http.get('http://192.168.2.185/WebAPI/api/Login');
   }
 
