@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { LabReportTypesPage } from '../reports/lab-report-types/lab-report-types'
 
 
 /**
@@ -26,7 +27,7 @@ export class HomePage {
 
   goToLabReportType()
   {
-    this.navCtrl.setRoot('LabReportTypesPage');
+    this.navCtrl.push(LabReportTypesPage);
   }
 
   presentToast():void {
