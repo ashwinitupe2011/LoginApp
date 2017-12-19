@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PrescriptionServiceProvider } from '../../../providers/prescription-service/prescription-service';
+import { PresceriptionDetailsPage } from '../../presceription-details/presceription-details'
 
 /**
  * Generated class for the PrescriptionListPage page.
@@ -12,14 +14,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-prescription-list',
   templateUrl: 'prescription-list.html',
+  providers:[PrescriptionServiceProvider]
 })
 export class PrescriptionListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  presciptionListData : any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public prescriptionService:PrescriptionServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrescriptionListPage');
+
+    this.prescriptionService.getPrescriptionListResponse().then(data => {
+        this.presciptionListData = data;
+        console.log(this.presciptionListData)
+    });
+  }
+
+  sectionToggle(i)
+  {
+    console.log(i)
+    this.presciptionListData[i].open = ! this.presciptionListData[i].open;
+  }
+
+  goToPrescriptionDetails(prescriptionDate,prescriptionID)
+  {
+    console.log(prescriptionDate);
+    console.log(prescriptionID);
+    this.navCtrl.push(PresceriptionDetailsPage);
   }
 
 }
