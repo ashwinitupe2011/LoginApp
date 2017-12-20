@@ -46,8 +46,7 @@ export class HomePage {
   
   goToPrescriptionList()
   {
-    this.navCtrl.push(PrescriptionListPage);
-    // this.navCtrl.push(PrescriptionListPage);
+    this.navCtrl.setRoot(PrescriptionListPage);
   }
 
 }
