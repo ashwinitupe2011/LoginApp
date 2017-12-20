@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PrescriptionServiceProvider } from '../../../providers/prescription-service/prescription-service';
-import { PresceriptionDetailsPage } from '../../presceription-details/presceription-details'
+import { PresceriptionDetailsPage } from '../../prescription/presceription-details/presceription-details'
 
 /**
  * Generated class for the PrescriptionListPage page.
@@ -42,7 +42,7 @@ export class PrescriptionListPage {
   {
     console.log(prescriptionDate);
     console.log(prescriptionID);
-    this.navCtrl.push(PresceriptionDetailsPage);
+    this.navCtrl.push(PresceriptionDetailsPage,{prescriptionDate:prescriptionDate,prescriptionID:prescriptionID});
   }
 
 }

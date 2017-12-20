@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { LabReportTypesPage } from '../reports/lab-report-types/lab-report-types'
-
+import { PrescriptionListPage } from '../prescription/prescription-list/prescription-list'
 
 /**
  * Generated class for the HomePage page.
@@ -46,7 +46,8 @@ export class HomePage {
   
   goToPrescriptionList()
   {
-    this.navCtrl.setRoot('PrescriptionListPage');
+    this.navCtrl.push(PrescriptionListPage);
+    // this.navCtrl.push(PrescriptionListPage);
   }
 
 }

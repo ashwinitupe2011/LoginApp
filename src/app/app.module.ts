@@ -14,7 +14,8 @@ import { LabResultGraphPage } from '../pages/reports/lab-result-graph/lab-result
 import { LabParamDetailsPage } from '../pages/reports/lab-param-details/lab-param-details'
 import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report-types'
 import { PrescriptionServiceProvider } from '../providers/prescription-service/prescription-service';
-import { PresceriptionDetailsPage } from '../pages/presceription-details/presceription-details'
+import { PresceriptionDetailsPage } from '../pages/prescription/presceription-details/presceription-details'
+import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PresceriptionDetailsPage } from '../pages/presceription-details/prescer
     LabResultGraphPage,
     LabParamDetailsPage,
     LabReportTypesPage,
-    PresceriptionDetailsPage
+    PresceriptionDetailsPage,
+    PrescriptionListPage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -43,7 +45,8 @@ import { PresceriptionDetailsPage } from '../pages/presceription-details/prescer
     LabResultGraphPage,
     LabParamDetailsPage,
     LabReportTypesPage,
-    PresceriptionDetailsPage
+    PresceriptionDetailsPage,
+    PrescriptionListPage
     // LabReportTestParametersPage
   ],
   providers: [

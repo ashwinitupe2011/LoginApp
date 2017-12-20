@@ -11,32 +11,12 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PrescriptionServiceProvider {
   data : any[];
+  prescriptionDetails : any[];
 
   constructor(public http: Http) {
     console.log('Hello PrescriptionServiceProvider Provider');
   }
 
-  // load() {
-  //   if (this.data) {
-  //     // already loaded data
-  //     return Promise.resolve(this.data);
-  //   }
-  
-  //   // don't have the data yet
-  //   return new Promise(resolve => {
-  //     // We're using Angular HTTP provider to request the data,
-  //     // then on the response, it'll map the JSON data to a parsed JS object.
-  //     // Next, we process the data and resolve the promise with the new data.
-  //     this.http.get('http://192.168.2.185/WebAPI/api/Login')
-  //       .map(res => res.json())
-  //       .subscribe(data => {
-  //         // we've got back the raw data, now generate the core schedule data
-  //         // and save the data for later reference
-  //         this.data = data;
-  //         resolve(this.data);
-  //       });
-  //   });
-  // }
 
   getPrescriptionListResponse(){
 
@@ -64,11 +44,46 @@ export class PrescriptionServiceProvider {
           this.http.post('http://192.168.2.185/WebAPI/api/PrescriptionList',data,options)
             .map(res => res.json().data.PrescriptionList)
             .subscribe(data => {
-              console.log("Login: " +data);
+              console.log("prescription List : " +data);
               this.data = data;
               resolve(this.data);
             });
         });
+  }
+
+  getPrescriptionDetailsResponse(prescriptionDate,prescriptionID)
+  {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+
+    let options = new RequestOptions({method:"POST",headers:headers})
+  
+    let data = JSON.stringify(
+      {unitNo:1,
+        request:"GetPrescriptionDetailList",
+      unique_token:123456,
+      prescriptionDate : prescriptionDate,
+      prescriptionID : prescriptionID,  
+      patientID:window.localStorage.getItem('PatientId')
+     })
+    console.log(data);
+
+    if (this.prescriptionDetails) {
+          return Promise.resolve(this.data);
+        }
+      
+      
+        return new Promise(resolve => {
+          this.http.post('http://192.168.2.185/WebAPI/api/PrescriptionDetails',data,options)
+            .map(res => res.json().data.PrescriptionDetailList)
+            .subscribe(data => {
+              console.log("prescription details : " +data);
+              this.prescriptionDetails = data;
+              resolve(this.prescriptionDetails);
+            });
+        });
+
   }
 
 }
