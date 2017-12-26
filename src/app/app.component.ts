@@ -3,8 +3,9 @@ import { Platform,Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
 import { LoginPage } from '../pages/login/login';
+import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report-types'
+import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
 
 @Component({
   templateUrl: 'app.html'
@@ -61,6 +62,16 @@ export class MyApp {
          console.log(this.patientEmailId)
          console.log(this.patientRegistrationNo)
          console.log(this.patientName)
+  }
+
+  gotoReportsPage()
+  {
+    this.nav.setRoot(LabReportTypesPage);
+  }
+
+  gotoPrescriptionPage()
+  {
+    this.nav.setRoot(PrescriptionListPage);
   }
 }
 

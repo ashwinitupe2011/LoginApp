@@ -16,22 +16,32 @@ import { PrescriptionServiceProvider } from '../../../providers/prescription-ser
   providers:[PrescriptionServiceProvider]
 })
 export class PresceriptionDetailsPage {
-  prescriptionDetailsData : any;
+  presciptionDetailsListData : any;
 
   prescriptionDate:string;
   prescriptionId : string;
 
+  visitDate:string;
+  doctorName:string;
+  visitNumber:string;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams ,public prescriptionService:PrescriptionServiceProvider) {
     this.prescriptionDate = navParams.get("prescriptionDate");
     this.prescriptionId = navParams.get("prescriptionID");
+
+    console.log(this.visitNumber + "" + this.visitDate + " "+ this.doctorName);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PresceriptionDetailsPage' +   this.prescriptionDate + " : " + this.prescriptionId );
     this.prescriptionService.getPrescriptionDetailsResponse(this.prescriptionDate,this.prescriptionId).then(data => {
-      this.prescriptionDetailsData = data;
-      console.log(this.prescriptionDetailsData)
+      this.presciptionDetailsListData = data;
+      console.log("details"+this.presciptionDetailsListData)
+
+      this.visitNumber =  this.presciptionDetailsListData[0].VisitNumber;
+      this.visitDate =  this.presciptionDetailsListData[0].VisitDate;
+      this.doctorName =  this.presciptionDetailsListData[0].DoctorName;
   });
   }
-
 }

@@ -16,11 +16,8 @@ export class PrescriptionServiceProvider {
   constructor(public http: Http) {
     console.log('Hello PrescriptionServiceProvider Provider');
   }
-
-
+  
   getPrescriptionListResponse(){
-
-
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');

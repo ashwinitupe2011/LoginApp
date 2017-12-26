@@ -16,6 +16,22 @@
   </ion-navbar>
   </ion-header>
 
-<ion-content padding>
+  <ion-content>
 
-</ion-content>
+      <ion-card-content>
+        <ion-item text-wrap> Visit Number : {{visitNumber}}</ion-item>
+        <ion-item text-wrap>Vistit Date :  {{visitDate}}</ion-item> 
+          <ion-item text-wrap >Doctor Name :  {{doctorName}} </ion-item>
+       </ion-card-content>
+      
+      <ion-item *ngFor="let preObj of presciptionDetailsListData" text-wrap >
+      
+          <ion-card>
+                  <ion-item>Medicine Name : {{preObj.MedicineName}} </ion-item>
+                  <ion-item>Duration : {{preObj.Duration}}</ion-item>
+                  <ion-item>Frequency : {{preObj.Frequency}} </ion-item>
+                  <ion-item>Dosage : {{preObj.Dosage}} </ion-item>
+              </ion-card>
+  
+        </ion-item>
+  </ion-content>

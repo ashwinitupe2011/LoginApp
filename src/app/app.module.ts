@@ -54,7 +54,7 @@ import { PrescriptionListPage } from '../pages/prescription/prescription-list/pr
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpReportProvider,
-    PrescriptionServiceProvider
+    PrescriptionServiceProvider,
   ]
 })
 export class AppModule {}
