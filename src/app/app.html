@@ -20,34 +20,39 @@
    <div class="list">
 
             <ion-list class="label-md">
-                <ion-item  (click)="gotoHomePage()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/icon.png" width="10%" />     
-                    Home
-                </ion-item>
-                <ion-item (click)="go_to_home()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/appointment_icon.png" width="10%" />     
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/icon.png" width="10%" /> Home
+                </button>
+
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/appointment_icon.png" width="10%" />     
                     Create Appointment
-                </ion-item>
-                <ion-item (click)="go_to_home()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/medical_report_icon.png" width="10%" />     
+                </button>
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/medical_report_icon.png" width="10%" />     
                     View Reports
-                </ion-item>
-                <ion-item (click)="go_to_home()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/prescription_icon.png" width="10%" />     
+                </button>
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/prescription_icon.png" width="10%" />     
                     View Prescription
-                </ion-item>
-                <ion-item (click)="go_to_home()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/summary.png" width="10%" />     
+                </button>
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/summary.png" width="10%" />     
                     Appointmnet Summary
-                </ion-item>
-                <ion-item (click)="go_to_home()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/user.png" width="10%" />     
+                </button>
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/icon.png" width="10%" /> Home
+                </button>
+                <button menuClose ion-item  (click)="gotoHomePage()">
+                    <img src="assets/imgs/drawer_imgs/user.png" width="10%" />     
                    Profile
-                </ion-item>
-                <ion-item (click)="logoutFunction()" menuClose>   
-                        <img src="assets/imgs/drawer_imgs/logout.png" width="10%" />     
+                </button>
+                
+                <button menuClose ion-item  (click)="logoutFunction()">
+                    <img src="assets/imgs/drawer_imgs/logout.png" width="10%" />     
                     Logout
-                </ion-item>
+                </button>
+
             </ion-list>
             </div>
         </ion-content>
