@@ -16,6 +16,8 @@ import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report
 import { PrescriptionServiceProvider } from '../providers/prescription-service/prescription-service';
 import { PresceriptionDetailsPage } from '../pages/prescription/presceription-details/presceription-details'
 import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
+import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
+import { AppointmentServiceProvider } from '../providers/appointment-service/appointment-service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PrescriptionListPage } from '../pages/prescription/prescription-list/pr
     LabParamDetailsPage,
     LabReportTypesPage,
     PresceriptionDetailsPage,
-    PrescriptionListPage
+    PrescriptionListPage,
+    AppointmnetSummaryPage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -46,7 +49,8 @@ import { PrescriptionListPage } from '../pages/prescription/prescription-list/pr
     LabParamDetailsPage,
     LabReportTypesPage,
     PresceriptionDetailsPage,
-    PrescriptionListPage
+    PrescriptionListPage,
+    AppointmnetSummaryPage
     // LabReportTestParametersPage
   ],
   providers: [
@@ -55,6 +59,7 @@ import { PrescriptionListPage } from '../pages/prescription/prescription-list/pr
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpReportProvider,
     PrescriptionServiceProvider,
+    AppointmentServiceProvider,
   ]
 })
 export class AppModule {}

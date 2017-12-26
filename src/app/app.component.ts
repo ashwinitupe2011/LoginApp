@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report-types'
 import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
+import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
 
 @Component({
   templateUrl: 'app.html'
@@ -72,6 +73,11 @@ export class MyApp {
   gotoPrescriptionPage()
   {
     this.nav.setRoot(PrescriptionListPage);
+  }
+
+  gotoAppointmnetSummaryPage()
+  {
+    this.nav.setRoot(AppointmnetSummaryPage);
   }
 }
 
