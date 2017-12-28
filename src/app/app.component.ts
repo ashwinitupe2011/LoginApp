@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report-types'
 import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
 import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
+import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet';
 
 @Component({
   templateUrl: 'app.html'
@@ -78,6 +79,10 @@ export class MyApp {
   gotoAppointmnetSummaryPage()
   {
     this.nav.setRoot(AppointmnetSummaryPage);
+  }
+  gotoAppointmnetPage()
+  {
+    this.nav.setRoot(CreateAppointmnetPage);
   }
 }
 
