@@ -20,6 +20,7 @@ import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary
 import { AppointmentServiceProvider } from '../providers/appointment-service/appointment-service';
 
 import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet'
+import { DoctorDetailsModalPage } from '../pages/appointmnet_creation/doctor-details-modal/doctor-details-modal'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appo
     PresceriptionDetailsPage,
     PrescriptionListPage,
     AppointmnetSummaryPage,
-    CreateAppointmnetPage
+    CreateAppointmnetPage,
+    DoctorDetailsModalPage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -54,7 +56,8 @@ import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appo
     PresceriptionDetailsPage,
     PrescriptionListPage,
     AppointmnetSummaryPage,
-    CreateAppointmnetPage
+    CreateAppointmnetPage,
+    DoctorDetailsModalPage
     // LabReportTestParametersPage
   ],
   providers: [
