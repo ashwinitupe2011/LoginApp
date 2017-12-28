@@ -6,7 +6,6 @@
 -->
 <ion-header>
   <ion-navbar>
-    
   <ion-buttons left>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -17,6 +16,18 @@
   </ion-header>
 
 
-<ion-content padding>
+  <ion-content>    
+    <ion-item *ngFor="let aptObj of appointmnetSummaryData" text-wrap >
+    
+        <ion-card>
+  
+          <ion-item >{{aptObj.appointmentNumber}}</ion-item>
+                <ion-item>Date: {{aptObj.aptDate}} </ion-item>
+                <ion-item>time: {{aptObj.aptTime}} </ion-item>
+                <ion-item>Doctor Name : {{aptObj.aptDoctor}}</ion-item>
+                <ion-item>Status : {{aptObj.aptStatus}}</ion-item>
+                <ion-item>Visit Status : {{aptObj.VisitStatus}}</ion-item>
+            </ion-card>
 
+      </ion-item>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AppointmentServiceProvider } from '../../../providers/appointment-service/appointment-service';
 
 /**
  * Generated class for the AppointmnetSummaryPage page.
@@ -12,14 +13,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-appointmnet-summary',
   templateUrl: 'appointmnet-summary.html',
+  providers:[AppointmentServiceProvider]
 })
 export class AppointmnetSummaryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  appointmnetSummaryData : any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public aptService : AppointmentServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AppointmnetSummaryPage');
+
+
+    this.aptService.getAppointmentResponse().then(data =>
+    {
+      this.appointmnetSummaryData = data;
+      console.log("Appointmnet "+this.appointmnetSummaryData)
+    });
   }
 
 }
