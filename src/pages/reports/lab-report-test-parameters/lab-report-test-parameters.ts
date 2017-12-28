@@ -65,12 +65,12 @@ export class LabReportTestParametersPage {
     console.log(testName);
     console.log(labNumber);
     console.log(reportDate);
-    this.navCtrl.setRoot(LabParamDetailsPage,{labNumber:labNumber,reportDate:reportDate,testName:testName});
+    this.navCtrl.push(LabParamDetailsPage,{labNumber:labNumber,reportDate:reportDate,testName:testName});
   }
 
   goToReportGraph(testName)
   {
-    this.navCtrl.setRoot(LabResultGraphPage);
+    this.navCtrl.push(LabResultGraphPage,{});
   }
   
 }
