@@ -4,6 +4,7 @@ import { ToastController } from 'ionic-angular';
 import { LabReportTypesPage } from '../reports/lab-report-types/lab-report-types'
 import { PrescriptionListPage } from '../prescription/prescription-list/prescription-list'
 import { AppointmnetSummaryPage } from '../appointmnet/appointmnet-summary/appointmnet-summary'
+import { CreateAppointmnetPage } from '../appointmnet_creation/create-appointmnet/create-appointmnet';
 
 /**
  * Generated class for the HomePage page.
@@ -55,4 +56,8 @@ export class HomePage {
     this.navCtrl.setRoot(AppointmnetSummaryPage);
   }
 
+  gotoCreateAppointmnet()
+  {
+    this.navCtrl.setRoot(CreateAppointmnetPage);
+  }
 }

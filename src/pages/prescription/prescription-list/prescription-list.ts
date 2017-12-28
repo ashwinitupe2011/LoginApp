@@ -42,7 +42,9 @@ export class PrescriptionListPage {
   {
     console.log(prescriptionDate);
     console.log(prescriptionID);
+    this.navCtrl.swipeBackEnabled = true;
     this.navCtrl.push(PresceriptionDetailsPage,{prescriptionDate:prescriptionDate,prescriptionID:prescriptionID});
+    this.navCtrl.swipeBackEnabled = true;
   }
 
 }

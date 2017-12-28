@@ -15,17 +15,30 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-title {
+
+.toolbar-background {
+  background-color: color($colors,primary);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.ion-title {
     position: absolute;
-    top: 0;
-    background:color($colors,dark);
-    left: 0;
-    color: color($colors,white-color);
-    padding: 0 90px 1px;
     width: 100%;
     height: 100%;
     text-align: center;
   }
+
+//   .toolbar-title-md {
+//     padding: 0 12px;
+//     font-size: 1.6rem;
+//     font-weight: 500;
+//     color: #fff;
+//     text-align: center;
+//     width: 100%;
+//     height: 100%;
+// }
 
   .imageBack{
     height: 25%;
@@ -36,8 +49,10 @@ ion-title {
     background-size: cover;
   }
 
-  .label-md {
+  [text-wrap] .label-md{
     margin: 5px 5px 5px 0;
+    color:color($colors,primary);
+    font-size: 1.4rem;
   }
 
   .toolbar-title-md {
@@ -46,10 +61,6 @@ ion-title {
     font-weight: 500;
     color: color($colors,white-color);
   }
-  .label-ios {
-    margin: 5px 5px 5px 0;
-    color:color($colors,grey-color);
-}
 
 .accordion-list {
   background: #fff;
@@ -114,5 +125,6 @@ ion-title {
 }   
 .label-ios {
   margin: 5px 5px 5px 0;
-  color: #000;
+  color:color($colors,black-color);
+  font-size: 1.4rem;
 } 

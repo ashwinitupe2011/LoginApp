@@ -19,6 +19,8 @@ import { PrescriptionListPage } from '../pages/prescription/prescription-list/pr
 import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
 import { AppointmentServiceProvider } from '../providers/appointment-service/appointment-service';
 
+import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +32,8 @@ import { AppointmentServiceProvider } from '../providers/appointment-service/app
     LabReportTypesPage,
     PresceriptionDetailsPage,
     PrescriptionListPage,
-    AppointmnetSummaryPage
+    AppointmnetSummaryPage,
+    CreateAppointmnetPage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -50,7 +53,8 @@ import { AppointmentServiceProvider } from '../providers/appointment-service/app
     LabReportTypesPage,
     PresceriptionDetailsPage,
     PrescriptionListPage,
-    AppointmnetSummaryPage
+    AppointmnetSummaryPage,
+    CreateAppointmnetPage
     // LabReportTestParametersPage
   ],
   providers: [

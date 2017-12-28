@@ -53,7 +53,7 @@ export class LabReportDatesPage {
   {
     console.log(labNumber);
     console.log(reportDate);
-    this.navCtrl.setRoot(LabReportDetailsPage,{labNumber:labNumber,reportDate:reportDate});
+    this.navCtrl.push(LabReportDetailsPage,{labNumber:labNumber,reportDate:reportDate});
   }
 
 
