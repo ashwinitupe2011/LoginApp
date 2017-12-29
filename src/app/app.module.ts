@@ -21,6 +21,7 @@ import { AppointmentServiceProvider } from '../providers/appointment-service/app
 
 import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet'
 import { DoctorDetailsModalPage } from '../pages/appointmnet_creation/doctor-details-modal/doctor-details-modal'
+import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet-servie/create-appointmnet-servie';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { DoctorDetailsModalPage } from '../pages/appointmnet_creation/doctor-det
     HttpReportProvider,
     PrescriptionServiceProvider,
     AppointmentServiceProvider,
+    CreateAppointmnetServieProvider,
   ]
 })
 export class AppModule {}

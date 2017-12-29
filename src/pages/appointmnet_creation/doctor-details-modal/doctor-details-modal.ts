@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angular';
+import { CreateAppointmnetServieProvider } from '../../../providers/create-appointmnet-servie/create-appointmnet-servie'
 
 /**
  * Generated class for the DoctorDetailsModalPage page.
@@ -12,19 +13,42 @@ import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angula
 @Component({
   selector: 'page-doctor-details-modal',
   templateUrl: 'doctor-details-modal.html',
+  providers:[CreateAppointmnetServieProvider]
 })
 export class DoctorDetailsModalPage {
 
-  constructor(public navCtrl: NavController,public viewCtrl : ViewController, public navParams: NavParams) {
+  doctorInfo:any;
+  doctorSpeciality:any;
+  doctorName:any;
+
+  constructor(public navCtrl: NavController,public aptService:CreateAppointmnetServieProvider,public viewCtrl : ViewController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DoctorDetailsModalPage');
+
+
+    this.doctorInfo = [
+      "Specilaity","Doctor"
+    ]
+
+    this.aptService.getDoctorSpeciality().then(data => {
+      this.doctorSpeciality = data;
+      console.log("sepcility : "+this.doctorSpeciality)
+
+  });
+
+
+  this.aptService.getDoctorName().then(data => {
+    this.doctorName = data;
+    console.log("sepcility : "+this.doctorName)
+
+});
   }
 
-  closeModal()
+  closeModal(values)
   {
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss("ghsgstsdbdtdbdfyfb : " + values);
   }
 
 }

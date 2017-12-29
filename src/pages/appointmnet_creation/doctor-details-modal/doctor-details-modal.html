@@ -18,12 +18,31 @@
   <ion-navbar>
       <ion-title>ModalPage</ion-title>
       <ion-buttons end>
-      <button ion-button (click)="closeModal()">Close</button>
+      <button ion-button (click)="closeModal(values)">Close</button>
       </ion-buttons>
   </ion-navbar>
   
   </ion-header>
 
 <ion-content padding>
+  <ion-item>
+    <ion-label floating >Select Speciality/Doctor</ion-label>
+    <ion-select  cancelText="Cancel" okText="OK">
+      <ion-option  *ngFor="let docObj of doctorInfo"  >{{ docObj }}</ion-option>
+    </ion-select>
+  </ion-item>
 
+  <ion-item>
+    <ion-label floating >Select User</ion-label>
+    <ion-select  cancelText="Cancel" okText="OK">
+      <ion-option *ngFor="let spObj of doctorSpeciality"  >{{ spObj.doctorSpeciality }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating >Select User</ion-label>
+    <ion-select  cancelText="Cancel" okText="OK">
+      <ion-option *ngFor="let docName of doctorName"  >{{ docName.doctorName }}</ion-option>
+    </ion-select>
+  </ion-item>
 </ion-content>

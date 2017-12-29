@@ -17,6 +17,7 @@ import { DoctorDetailsModalPage } from '../doctor-details-modal/doctor-details-m
 export class CreateAppointmnetPage {
 
   constructor(public navCtrl: NavController,public modalCtrl: ModalController, public navParams: NavParams) {
+    this.openModal();
   }
 
   ionViewDidLoad() {
@@ -25,7 +26,10 @@ export class CreateAppointmnetPage {
 
   openModal()
   {
-      let myModal = this.modalCtrl.create(DoctorDetailsModalPage);
-      myModal.present();
+      let doctorInfoModal = this.modalCtrl.create(DoctorDetailsModalPage);
+      doctorInfoModal.onDidDismiss(data =>{
+        console.log("data : " +data);
+      })
+      doctorInfoModal.present();
   }
 }
