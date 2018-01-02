@@ -31,16 +31,16 @@
       <ion-option  *ngFor="let docObj of doctorInfo"  >{{ docObj }}</ion-option>
     </ion-select>
   </ion-item>
-
+  
   <ion-item>
-    <ion-label floating >Select User</ion-label>
+    <ion-label floating >Select Specilaity</ion-label>
     <ion-select  cancelText="Cancel" okText="OK">
       <ion-option *ngFor="let spObj of doctorSpeciality"  >{{ spObj.doctorSpeciality }}</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
-    <ion-label floating >Select User</ion-label>
+    <ion-label floating >Select Doctor Name</ion-label>
     <ion-select  cancelText="Cancel" okText="OK">
       <ion-option *ngFor="let docName of doctorName"  >{{ docName.doctorName }}</ion-option>
     </ion-select>
