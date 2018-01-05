@@ -8,6 +8,7 @@ import { LabReportTypesPage } from '../pages/reports/lab-report-types/lab-report
 import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
 import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
 import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet';
+import { ViewProfilePage } from '../pages/profile/view-profile/view-profile'
 
 @Component({
   templateUrl: 'app.html'
@@ -83,6 +84,11 @@ export class MyApp {
   gotoAppointmnetPage()
   {
     this.nav.setRoot(CreateAppointmnetPage);
+  }
+
+  gotoViewProfilePage()
+  {
+    this.nav.setRoot(ViewProfilePage);
   }
 }
 

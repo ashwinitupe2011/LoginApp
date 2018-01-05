@@ -19,9 +19,29 @@
 <ion-content>
      <ion-item *ngFor="let testObj of labTestParams" text-wrap >
         <ion-card>
-                <ion-item>Test Parameter : {{testObj.ParamName}} </ion-item>
-                <ion-item>Test Value : {{testObj.Result}}</ion-item>
-                <ion-item>Test Normal Range : {{testObj.ParamNormalRange}} </ion-item>
+
+                <ion-row text-wrap>
+                   <ion-col>Test Parameter :</ion-col>
+                   <ion-col>{{testObj.ParamName}}</ion-col>
+                </ion-row>
+
+            
+                <ion-row text-wrap>
+                   <ion-col>Test Value :</ion-col>
+                   <ion-col>{{testObj.Result}}</ion-col>
+                </ion-row>
+          
+
+
+                <ion-row text-wrap>
+                   <ion-col>Test Normal Range :</ion-col>
+                   <ion-col>{{testObj.ParamNormalRange}}</ion-col>
+                </ion-row>
+             
+
+                <!-- <ion-item>  </ion-item> -->
+              <!-- /  <ion-item> </ion-item> -->
+                <!-- <ion-item>  </ion-item> -->
             </ion-card>
 
       </ion-item>

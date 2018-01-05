@@ -31,9 +31,24 @@
             <ion-card>
 
               <!-- <ion-card-content>  -->
-                    <ion-item>Test Parameter : {{s.ParamName}} </ion-item>
-                    <ion-item>Test Value : {{s.Result}} </ion-item>
-                    <ion-item>Test Normal Range : {{s.ParamNormalRange}} </ion-item>
+
+
+                  <ion-row text-wrap>
+                      <ion-col>Test Parameter :</ion-col>
+                      <ion-col>{{s.ParamName}}</ion-col>
+                   </ion-row>
+
+
+                   <ion-row text-wrap>
+                      <ion-col>Test Value :</ion-col>
+                      <ion-col>{{s.Result}}</ion-col>
+                   </ion-row>
+
+                   <ion-row text-wrap>
+                      <ion-col>Test Normal Range :</ion-col>
+                      <ion-col>{{s.ParamNormalRange}}</ion-col>
+                   </ion-row>
+
 
                 <!-- </ion-card-content> -->
                 </ion-card>

@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile'
+import { ViewProfilePage } from '../pages/profile/view-profile/view-profile';
 import { HttpReportProvider } from '../providers/http-report/http-report';
 import { LabReportDetailsPage } from '../pages/reports/lab-report-details/lab-report-details'
 import { LabResultGraphPage } from '../pages/reports/lab-result-graph/lab-result-graph'
@@ -22,12 +22,14 @@ import { AppointmentServiceProvider } from '../providers/appointment-service/app
 import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet'
 import { DoctorDetailsModalPage } from '../pages/appointmnet_creation/doctor-details-modal/doctor-details-modal'
 import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet-servie/create-appointmnet-servie';
+import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile'
+import { ProfileOperationServiceProvider } from '../providers/profile-operation-service/profile-operation-service';
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    ProfilePage,
+    ViewProfilePage,
     LabReportDetailsPage,
     LabResultGraphPage,
     LabParamDetailsPage,
@@ -36,7 +38,8 @@ import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet
     PrescriptionListPage,
     AppointmnetSummaryPage,
     CreateAppointmnetPage,
-    DoctorDetailsModalPage
+    DoctorDetailsModalPage,
+    EditProfilePage
     // LabReportTestParametersPage
   ],
   imports: [
@@ -49,7 +52,7 @@ import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet
   entryComponents: [
     MyApp,
     LoginPage,
-    ProfilePage,
+    ViewProfilePage,
     LabReportDetailsPage,
     LabResultGraphPage,
     LabParamDetailsPage,
@@ -58,7 +61,8 @@ import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet
     PrescriptionListPage,
     AppointmnetSummaryPage,
     CreateAppointmnetPage,
-    DoctorDetailsModalPage
+    DoctorDetailsModalPage,
+    EditProfilePage
     // LabReportTestParametersPage
   ],
   providers: [
@@ -69,6 +73,7 @@ import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet
     PrescriptionServiceProvider,
     AppointmentServiceProvider,
     CreateAppointmnetServieProvider,
+    ProfileOperationServiceProvider,
   ]
 })
 export class AppModule {}

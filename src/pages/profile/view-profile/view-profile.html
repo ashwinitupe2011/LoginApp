@@ -1,0 +1,141 @@
+<!--
+   Generated template for the ViewProfilePage page.
+
+   See http://ionicframework.com/docs/components/#navigation for more info on
+   Ionic pages and navigation.
+   -->
+   <ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>Patient Profile</ion-title>
+        <ion-buttons left>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="editUserInfo()">
+                <img src="assets/imgs/edit.png" (click)="gotoCreateAppointmnet()" />
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Patient Id :</ion-col>
+            <ion-col>{{userDetailsData.patientId}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Name :</ion-col>
+            <ion-col>
+                <ion-row>
+                    <ion-col>{{userDetailsData.firstName}}</ion-col>
+                    <ion-col>{{userDetailsData.lastname}}</ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Title :</ion-col>
+            <ion-col>{{userDetailsData.title}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Gender :</ion-col>
+            <ion-col>{{userDetailsData.gender}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Date of Birth :</ion-col>
+            <ion-col>{{userDetailsData.DOB}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Age :</ion-col>
+            <ion-col>{{userDetailsData.age}} ears</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Husband/Father Name :</ion-col>
+            <ion-col>{{userDetailsData.fatherName}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Address 1 :</ion-col>
+            <ion-col>{{userDetailsData.address1}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Address 2 :</ion-col>
+            <ion-col>{{userDetailsData.address2}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Country :</ion-col>
+            <ion-col>{{userDetailsData.country}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>State :</ion-col>
+            <ion-col>{{userDetailsData.state}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>City :</ion-col>
+            <ion-col>{{userDetailsData.cityName}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Area :</ion-col>
+            <ion-col>{{userDetailsData.area}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>PinCode :</ion-col>
+            <ion-col>{{userDetailsData.postalCode}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Mobile Number :</ion-col>
+            <ion-col>{{userDetailsData.mobileNo}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-row>
+            <ion-col>Telephone Number :</ion-col>
+            <ion-col>{{userDetailsData.telPhone}}</ion-col>
+        </ion-row>
+    </ion-item>
+
+</ion-content>

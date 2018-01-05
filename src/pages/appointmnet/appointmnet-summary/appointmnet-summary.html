@@ -1,33 +1,45 @@
 <!--
-  Generated template for the AppointmnetSummaryPage page.
+   Generated template for the AppointmnetSummaryPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-  <ion-navbar>
-  <ion-buttons left>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  </ion-buttons>
-  <ion-title>Appointmnet Summary</ion-title>
-  </ion-navbar>
-  </ion-header>
-
-
-  <ion-content>    
-    <ion-item *ngFor="let aptObj of appointmnetSummaryData" text-wrap >
-    
-        <ion-card>
-  
-          <ion-item >{{aptObj.appointmentNumber}}</ion-item>
-                <ion-item>Date: {{aptObj.aptDate}} </ion-item>
-                <ion-item>time: {{aptObj.aptTime}} </ion-item>
-                <ion-item>Doctor Name : {{aptObj.aptDoctor}}</ion-item>
-                <ion-item>Status : {{aptObj.aptStatus}}</ion-item>
-                <ion-item>Visit Status : {{aptObj.VisitStatus}}</ion-item>
+   See http://ionicframework.com/docs/components/#navigation for more info on
+   Ionic pages and navigation.
+   -->
+   <ion-header>
+        <ion-navbar>
+            <ion-buttons left>
+                <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+            </ion-buttons>
+            <ion-title>Appointmnet Summary</ion-title>
+        </ion-navbar>
+    </ion-header>
+    <ion-content>
+        <ion-item *ngFor="let aptObj of appointmnetSummaryData" text-wrap>
+            <ion-card>
+                <ion-row text-wrap>
+                    <ion-col style="text-decoration: underline; color:rgb(9, 155, 240)">{{aptObj.appointmentNumber}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Date :</ion-col>
+                    <ion-col>{{aptObj.aptDate}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Time :</ion-col>
+                    <ion-col>{{aptObj.aptTime}} </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Doctor Name :</ion-col>
+                    <ion-col>{{aptObj.aptDoctor}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Status :</ion-col>
+                    <ion-col>{{aptObj.aptStatus}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Visit Status :</ion-col>
+                    <ion-col>{{aptObj.VisitStatus}}</ion-col>
+                </ion-row>
             </ion-card>
-
-      </ion-item>
-</ion-content>
+        </ion-item>
+    </ion-content>

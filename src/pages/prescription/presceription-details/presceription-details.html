@@ -5,33 +5,68 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    
-  <ion-buttons left>
-    <!-- <button ion-button menuToggle>
+    <ion-navbar>
+
+        <ion-buttons left>
+            <!-- <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button> -->
-  </ion-buttons>
-  <ion-title >Prescription Details</ion-title>
-  </ion-navbar>
-  </ion-header>
+        </ion-buttons>
+        <ion-title>Prescription Details</ion-title>
+    </ion-navbar>
+</ion-header>
 
-  <ion-content>
+<ion-content>
 
-      <ion-card-content>
-        <ion-item text-wrap> Visit Number : {{visitNumber}}</ion-item>
-        <ion-item text-wrap>Vistit Date :  {{visitDate}}</ion-item> 
-          <ion-item text-wrap >Doctor Name :  {{doctorName}} </ion-item>
-       </ion-card-content>
+    <ion-card-content>
       
-      <ion-item *ngFor="let preObj of presciptionDetailsListData" text-wrap >
-      
-          <ion-card>
-                  <ion-item>Medicine Name : {{preObj.MedicineName}} </ion-item>
-                  <ion-item>Duration : {{preObj.Duration}}</ion-item>
-                  <ion-item>Frequency : {{preObj.Frequency}} </ion-item>
-                  <ion-item>Dosage : {{preObj.Dosage}} </ion-item>
-              </ion-card>
-  
+        <ion-item text-wrap>
+            <ion-row>
+                <ion-col>Visit Number :</ion-col>
+                <ion-col>{{visitNumber}}</ion-col>
+            </ion-row>
         </ion-item>
-  </ion-content>
+
+        <ion-item text-wrap>
+            <ion-row>
+                <ion-col>Vistit Date :</ion-col>
+                <ion-col>{{visitDate}}</ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item text-wrap>
+            <ion-row>
+                <ion-col>Doctor Name :</ion-col>
+                <ion-col>{{doctorName}}</ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-card-content>
+
+    <ion-item *ngFor="let preObj of presciptionDetailsListData" text-wrap>
+
+        <ion-card>
+            <!-- <ion-item>Medicine Name : {{preObj.MedicineName}} </ion-item> -->
+            <ion-row text-wrap>
+                <ion-col>Medicine Name :</ion-col>
+                <ion-col>{{preObj.MedicineName}}</ion-col>
+            </ion-row>
+
+            <ion-row text-wrap>
+                <ion-col>Duration :</ion-col>
+                <ion-col>{{preObj.Duration}}</ion-col>
+            </ion-row>
+
+            <ion-row text-wrap>
+                <ion-col>Frequency :</ion-col>
+                <ion-col>{{preObj.Frequency}}</ion-col>
+            </ion-row>
+
+            <ion-row text-wrap>
+                <ion-col>Dosage :</ion-col>
+                <ion-col>{{preObj.Dosage}}</ion-col>
+            </ion-row>
+
+        </ion-card>
+
+    </ion-item>
+</ion-content>

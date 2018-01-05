@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,ModalController} from 'ionic-angular';
 import { DoctorDetailsModalPage } from '../doctor-details-modal/doctor-details-modal';
 
+
 /**
  * Generated class for the CreateAppointmnetPage page.
  *
@@ -15,9 +16,10 @@ import { DoctorDetailsModalPage } from '../doctor-details-modal/doctor-details-m
   templateUrl: 'create-appointmnet.html',
 })
 export class CreateAppointmnetPage {
-
+ 
   constructor(public navCtrl: NavController,public modalCtrl: ModalController, public navParams: NavParams) {
-    this.openModal();
+     
+  this.openModal();
   }
 
   ionViewDidLoad() {
