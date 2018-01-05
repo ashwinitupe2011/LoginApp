@@ -37,7 +37,7 @@ export class ViewProfilePage {
   editUserInfo()
   {
     console.log("editUser");
-    this.navCtrl.push(EditProfilePage,{});
+    this.navCtrl.push(EditProfilePage,{userData:this.userDetailsData});
   }
 
 }

@@ -14,8 +14,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'edit-profile.html',
 })
 export class EditProfilePage {
+  userDetails : any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.userDetails = navParams.get("userData");
+    console.log("data"+this.userDetails);
   }
 
   ionViewDidLoad() {
