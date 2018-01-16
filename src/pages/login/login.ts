@@ -21,6 +21,9 @@ export class LoginPage {
 
   loading : Loading;
   validations_form: FormGroup;
+
+  public username : string = "ph000700";
+  public password : string = "abc";
  
    hospitalUnits: Array<string>;
    patientType:Array<string>;

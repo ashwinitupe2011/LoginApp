@@ -25,12 +25,15 @@ export class LabResultGraphPage {
   public graphDates : Array<any> = [];
   graphResData: any[];
 
+  testName : string;
+
   constructor(public navCtrl: NavController,private http:Http, public navParams: NavParams) {
+    this.testName = this.navParams.get("TestName");
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LabResultGraphPage');
+    console.log('ionViewDidLoad LabResultGraphPage'+this.testName);
     this.callGraphData();
     
   }
@@ -43,10 +46,10 @@ export class LabResultGraphPage {
 
     let options = new RequestOptions({method:"POST",headers:headers})
     let data = JSON.stringify(
-      {testName:"AMYLASE",
+      {testName:this.testName,
       unique_token:123456,
         unitNo:1,
-        paramName:"Amylase",
+        paramName:this.testName,
         request:"GetGraphValuesRequest",
         patientID:  window.localStorage.getItem('PatientId')
     }

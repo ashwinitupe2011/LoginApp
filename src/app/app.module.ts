@@ -25,6 +25,8 @@ import { CreateAppointmnetServieProvider } from '../providers/create-appointmnet
 import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile'
 import { ProfileOperationServiceProvider } from '../providers/profile-operation-service/profile-operation-service';
 
+import { CalendarModule } from "ion2-calendar";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -45,8 +47,8 @@ import { ProfileOperationServiceProvider } from '../providers/profile-operation-
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
- 
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

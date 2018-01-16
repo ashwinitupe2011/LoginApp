@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class CreateAppointmnetServieProvider {
-  data : any;
+  doctorSpeciality : any;
   doctorNameList : any;
   doctorTimeSlotList : any;
 
@@ -33,8 +33,8 @@ export class CreateAppointmnetServieProvider {
      })
     console.log(data);
 
-    if (this.data) {
-          return Promise.resolve(this.data);
+    if (this.doctorSpeciality) {
+          return Promise.resolve(this.doctorSpeciality);
         }
       
       
@@ -43,8 +43,8 @@ export class CreateAppointmnetServieProvider {
             .map(res => res.json().data.DoctorSpeciality)
             .subscribe(data => {
               console.log("Specilaity List : " +data);
-              this.data = data;
-              resolve(this.data);
+              this.doctorSpeciality = data;
+              resolve(this.doctorSpeciality);
             });
         });
   }
@@ -92,22 +92,21 @@ export class CreateAppointmnetServieProvider {
   
     let data = JSON.stringify(
       {unitNo:1,
-        request:"getDoctorNamesRequest",
+        request:"getTimeSlotsRequest",
       unique_token:123456,
-      specialityID:"1"
+      appDate :"16-Jan-2018",
+      doctorID : "183"
      })
     console.log(data);
 
     if (this.doctorTimeSlotList) {
           return Promise.resolve(this.doctorTimeSlotList);
         }
-      
-      
         return new Promise(resolve => {
-          this.http.post('http://192.168.2.185/WebAPI/api/GetDoctorName',data,options)
-            .map(res => res.json().data.DoctorList)
+          this.http.post('http://192.168.2.185/WebAPI/api/TimeSlots',data,options)
+            .map(res => res.json().data.Timeslots[0].List)
             .subscribe(data => {
-              console.log("name List : " +data);
+              console.log("TimeList : " +data);
               this.doctorTimeSlotList = data;
               resolve(this.doctorTimeSlotList);
             });

@@ -1,94 +1,89 @@
+<ion-content class="login-content" padding>
+  <div layout="row" layout-align="center center">
+      <img src="assets/icon/cims_logo.png" style="text-align: center;" width="100%" height="100%">
+  </div>
+  <form class="form" [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
 
-	<ion-content class="login-content" padding>
-      <div layout="row" layout-align="center center">
-          <img  src="assets/icon/cims_logo.png" style="text-align: center;"  width="100%" height="100%">
-      </div>
-      <form class="form" [formGroup]="validations_form"  (ngSubmit)="onSubmit(validations_form.value)">
-          
-          <ion-row>
+      <ion-row>
           <div class="login-box">
               <ion-list inset>
-              <ion-item>
-                  <ion-label floating >Select User</ion-label>
-                  <ion-select formControlName="patientType" cancelText="Cancel" okText="OK">
-                    <ion-option *ngFor="let pType of patientType" [value]="pType" >{{ pType }}</ion-option>
-                  </ion-select>
-                </ion-item>
-                </ion-list>
-                <ion-list inset>
-                <ion-item>
-                    <ion-label floating >Enter Username</ion-label>
-                    <ion-input type="text" formControlName="username" class="form-controll" required></ion-input>
+                  <ion-item>
+                      <ion-label floating>Select User</ion-label>
+                      <ion-select formControlName="patientType" cancelText="Cancel" okText="OK">
+                          <ion-option *ngFor="let pType of patientType" [value]="pType">{{ pType }}</ion-option>
+                      </ion-select>
+                  </ion-item>
+              </ion-list>
+              <ion-list inset>
+                  <ion-item>
+                      <ion-label floating>Enter Username</ion-label>
+                      <ion-input type="text" formControlName="username" [value]="username" class="form-controll" required> {{username}} </ion-input>
                   </ion-item>
 
                   <div class="validation-errors">
                       <ng-container *ngFor="let validation of validation_messages.username">
-                        <div class="error-message" *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
-                          {{ validation.message }}
-                        </div>
-                      </ng-container>
-                    </div>
-                    </ion-list>
-                    <ion-list inset>
-                    <ion-item>
-                        <ion-label floating >Enter Password</ion-label>
-                        <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
-                      </ion-item>
-                      <div class="validation-errors">
-                          <ng-container *ngFor="let validation of validation_messages.password">
-                            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                          <div class="error-message" *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
                               {{ validation.message }}
-                            </div>
-                          </ng-container>
-                        </div>
-                        </ion-list>
-                        <ion-list inset>
-                        <ion-item>
-                            <ion-label floating >Select Hospital Unit</ion-label>
-                            <ion-select formControlName="hospitalUnits" cancelText="Cancel" okText="OK">
-                              <ion-option *ngFor="let units of hospitalUnits" [value]="units" >{{ units }}</ion-option>
-                            </ion-select>
-                          </ion-item>
-                          <div class="validation-errors">
-                              <ng-container *ngFor="let validation of validation_messages.matching_passwords">
-                                <div class="error-message" *ngIf="validations_form.get('matching_passwords').hasError(validation.type) && (validations_form.get('matching_passwords').get('confirm_password').dirty || validations_form.get('matching_passwords').get('confirm_password').touched)">
-                                  {{ validation.message }}
-                                </div>
-                              </ng-container>
-                            </div>
-                            </ion-list>
-                            <ion-list inset>
-                            <div class="validation-errors">
-                                <ng-container *ngFor="let validation of validation_messages.terms">
-                                  <div class="error-message" *ngIf="validations_form.get('terms').hasError(validation.type) && (validations_form.get('terms').dirty || validations_form.get('terms').touched)">
-                                    {{ validation.message }}
-                                  </div>
-                                </ng-container>
-                              </div>
-                              </ion-list>
+                          </div>
+                      </ng-container>
+                  </div>
+              </ion-list>
+              <ion-list inset>
+                  <ion-item>
+                      <ion-label floating>Enter Password</ion-label>
+                      <ion-input type="password" formControlName="password" [value]="password" class="form-controll" required> {{password}}</ion-input>
+                  </ion-item>
+                  <div class="validation-errors">
+                      <ng-container *ngFor="let validation of validation_messages.password">
+                          <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                              {{ validation.message }}
+                          </div>
+                      </ng-container>
+                  </div>
+              </ion-list>
+              <ion-list inset>
+                  <ion-item>
+                      <ion-label floating>Select Hospital Unit</ion-label>
+                      <ion-select formControlName="hospitalUnits" cancelText="Cancel" okText="OK">
+                          <ion-option *ngFor="let units of hospitalUnits" [value]="units">{{ units }}</ion-option>
+                      </ion-select>
+                  </ion-item>
+                  <div class="validation-errors">
+                      <ng-container *ngFor="let validation of validation_messages.matching_passwords">
+                          <div class="error-message" *ngIf="validations_form.get('matching_passwords').hasError(validation.type) && (validations_form.get('matching_passwords').get('confirm_password').dirty || validations_form.get('matching_passwords').get('confirm_password').touched)">
+                              {{ validation.message }}
+                          </div>
+                      </ng-container>
+                  </div>
+              </ion-list>
+              <ion-list inset>
+                  <div class="validation-errors">
+                      <ng-container *ngFor="let validation of validation_messages.terms">
+                          <div class="error-message" *ngIf="validations_form.get('terms').hasError(validation.type) && (validations_form.get('terms').dirty || validations_form.get('terms').touched)">
+                              {{ validation.message }}
+                          </div>
+                      </ng-container>
+                  </div>
+              </ion-list>
 
-                              <ion-row class="signup-col">
-                                  <!-- <ion-col > -->
-                                    <button ion-button class="submit-btn" full type="submit" [disabled]="!validations_form.valid" >Login</button> 
-                                  <!-- </ion-col> -->
-                                </ion-row>
+              <ion-row class="signup-col">
 
-                              <!-- <button ion-button full type="submit" [disabled]="!validations_form.valid">Submit</button> -->
-                              <ion-row>
-                                  <ion-label class="register-btn">Powered by Soft.Com india Pvt. Ltd.</ion-label>
-                            
-                              </ion-row>
-          </div>
-         
-          </ion-row>
-          <div>
+                  <button ion-button class="submit-btn" full type="submit" [disabled]="!validations_form.valid">Login</button>
+              </ion-row>
+
+              <!-- <button ion-button full type="submit" [disabled]="!validations_form.valid">Submit</button> -->
               <ion-row>
-                  <ion-label class="signup-btn"   (click)="signuUpFunction()">Sign Up</ion-label>
-                  <ion-label class="forgot-btn" type="submit" (click)="forgotPasswordFunction()">Forgot Password</ion-label>
+                  <ion-label class="register-btn">Powered by Soft.Com india Pvt. Ltd.</ion-label>
+
               </ion-row>
           </div>
-      </form>
-  </ion-content>
-  
-  
-  
+
+      </ion-row>
+      <div>
+          <ion-row>
+              <ion-label class="signup-btn" (click)="signuUpFunction()">Sign Up</ion-label>
+              <ion-label class="forgot-btn" type="submit" (click)="forgotPasswordFunction()">Forgot Password</ion-label>
+          </ion-row>
+      </div>
+  </form>
+</ion-content>

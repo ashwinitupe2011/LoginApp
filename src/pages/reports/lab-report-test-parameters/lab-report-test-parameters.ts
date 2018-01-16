@@ -70,7 +70,7 @@ export class LabReportTestParametersPage {
 
   goToReportGraph(testName)
   {
-    this.navCtrl.push(LabResultGraphPage,{});
+    this.navCtrl.push(LabResultGraphPage,{TestName:testName});
   }
   
 }

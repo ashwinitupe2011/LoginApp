@@ -14,5 +14,104 @@
 
 
 <ion-content padding>
+  <ion-item-divider style="color: red">Personal Information </ion-item-divider>
+  <ion-item>
+  <ion-label floating >Enter Password</ion-label>
+  <ion-input type="password"  value={{patientPassword}} required></ion-input>
+</ion-item>
 
+<ion-item>
+  <ion-label floating >Confirm Password</ion-label>
+  <ion-input type="password" value={{patientPassword}} required></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label  >Title</ion-label>
+  <ion-select  cancelText="Cancel" okText="OK">
+    <ion-option *ngFor="let units of hospitalUnits" [value]="units" >{{ units }}</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label >Gender</ion-label>
+  <ion-select cancelText="Cancel" okText="OK">
+      <ion-option *ngFor="let units of hospitalUnits" [value]="units">{{ units }}</ion-option>
+  </ion-select>
+</ion-item>
+
+    <ion-item>
+        <ion-label floating >First Name :</ion-label>
+      <ion-input type="text" value={{firstName}} required></ion-input>
+    </ion-item>
+    <ion-item>floating
+        <ion-label floating >Last Name :</ion-label>
+      <ion-input type="text"  value={{lastName}}  required></ion-input>
+      
+    </ion-item>
+
+    <ion-item>
+        <ion-label >Date Of Birth :</ion-label>
+
+        <ion-label (click)="openCalendar()">{{userDOB}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Husband / FatherName :</ion-label>
+      <ion-input type="text"  value={{relativeName}}  required></ion-input>
+  </ion-item>
+<ion-item></ion-item>
+  <ion-item-divider style="color: red">Contact Details </ion-item-divider>
+
+  <ion-item>
+    <ion-label floating>Email Id :</ion-label>
+    <ion-input type="email"  value={{emailId}}  required></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Address 1:</ion-label>
+  <ion-textarea rows="3" value={{address1}} ></ion-textarea>
+</ion-item>
+
+<ion-item>
+    <ion-label floating>Address 2:</ion-label>
+  <ion-textarea rows="3" value={{address2}} ></ion-textarea>
+</ion-item>
+
+<ion-item>
+    <ion-label >Country</ion-label>
+    <ion-select cancelText="Cancel" okText="OK">
+        <ion-option *ngFor="let units of hospitalUnits" [value]="units">{{ units }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-label >State</ion-label>
+      <ion-select cancelText="Cancel" okText="OK">
+          <ion-option *ngFor="let units of hospitalUnits" [value]="units">{{ units }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label >Area</ion-label>
+        <ion-select cancelText="Cancel" okText="OK">
+            <ion-option *ngFor="let units of hospitalUnits" [value]="units">{{ units }}</ion-option>
+        </ion-select>
+      </ion-item>
+   
+      <ion-item>
+          <ion-label floating>PinCode :</ion-label>
+          <ion-input type="text" value={{pincode}} ></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Mobile Number :</ion-label>
+          <ion-input type="text" value={{mobileNumber}} ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Trlephone Number :</ion-label>
+          <ion-input type="text" value={{telNumber}} ></ion-input>
+      </ion-item>
+
+      
+      <ion-row class="signup-col">
+
+          <button ion-button class="submit-btn" full type="submit">Login</button>
+      </ion-row>
 </ion-content>
