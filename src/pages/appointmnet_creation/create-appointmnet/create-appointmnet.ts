@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,ModalController} from 'ionic-angular';
 import { DoctorDetailsModalPage } from '../doctor-details-modal/doctor-details-modal';
 import { CreateAppointmnetServieProvider } from '../../../providers/create-appointmnet-servie/create-appointmnet-servie'
+import { CreatePatientAppointmnetPage } from '../../appointmnet_creation/create-patient-appointmnet/create-patient-appointmnet';
 
 
 /**
@@ -20,12 +21,12 @@ import { CreateAppointmnetServieProvider } from '../../../providers/create-appoi
 export class CreateAppointmnetPage {
 
   public timeSlots : any[];
+
  
   constructor(public navCtrl: NavController,public modalCtrl: ModalController, public navParams: NavParams,public createAptService : CreateAppointmnetServieProvider) {
      
   this.openModal();
   }
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateAppointmnetPage');
@@ -40,6 +41,20 @@ export class CreateAppointmnetPage {
   });
   }
  
+  createAPT(timeslot,fromTime,toTime)
+  {
+    console.log(timeslot+" " + fromTime+ " " +toTime);
+    // this.navCtrl.push(CreatePatientAppointmnetPage,{});
+
+
+
+    this.navCtrl.swipeBackEnabled = true;
+    // this.navCtrl.push(PresceriptionDetailsPage,{prescriptionDate:prescriptionDate,prescriptionID:prescriptionID});
+    this.navCtrl.push(CreatePatientAppointmnetPage,{aptDate:"22/33/33"});
+    this.navCtrl.swipeBackEnabled = true;
+
+    
+  }
 
   openModal()
   {

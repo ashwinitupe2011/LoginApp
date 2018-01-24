@@ -18,6 +18,7 @@ import { PresceriptionDetailsPage } from '../pages/prescription/presceription-de
 import { PrescriptionListPage } from '../pages/prescription/prescription-list/prescription-list'
 import { AppointmnetSummaryPage } from '../pages/appointmnet/appointmnet-summary/appointmnet-summary'
 import { AppointmentServiceProvider } from '../providers/appointment-service/appointment-service';
+import { CreatePatientAppointmnetPage } from '../pages/appointmnet_creation/create-patient-appointmnet/create-patient-appointmnet'
 
 import { CreateAppointmnetPage } from '../pages/appointmnet_creation/create-appointmnet/create-appointmnet'
 import { DoctorDetailsModalPage } from '../pages/appointmnet_creation/doctor-details-modal/doctor-details-modal'
@@ -41,9 +42,9 @@ import { CalendarModule } from "ion2-calendar";
     AppointmnetSummaryPage,
     CreateAppointmnetPage,
     DoctorDetailsModalPage,
+    CreatePatientAppointmnetPage,
     EditProfilePage
-    // LabReportTestParametersPage
-  ],
+    ],
   imports: [
     BrowserModule,
     HttpModule,
@@ -64,7 +65,8 @@ import { CalendarModule } from "ion2-calendar";
     AppointmnetSummaryPage,
     CreateAppointmnetPage,
     DoctorDetailsModalPage,
-    EditProfilePage
+    EditProfilePage,
+    CreatePatientAppointmnetPage
     // LabReportTestParametersPage
   ],
   providers: [

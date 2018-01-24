@@ -20,22 +20,32 @@
     <ion-item>
         <ion-row>
           <ion-col>Selected Date : </ion-col>
-          <ion-col>16-Jan-2018</ion-col>
+          <input type="date" >
         </ion-row>
         <ion-row>
             <ion-col>Selected Day : </ion-col>
             <ion-col>Thusday</ion-col>
           </ion-row>
       </ion-item>
+
+
+
+
+<!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content></ion-refresher-content>
+</ion-refresher> -->
+
+      
     <ion-item *ngFor="let timeSlot of timeSlots"  >
-        <ion-card>
+        <ion-card (click)="createAPT(timeSlot.time,timeSlot.FromTime,timeSlot.ToTime)">
 
-                <ion-row text-wrap>
-                   <ion-col>{{timeSlot.time}}</ion-col>
+                <ion-row *ngIf="timeSlot.TimeAvailable" text-wrap>
+                   <ion-col  >{{timeSlot.time}}</ion-col>
                 </ion-row>
-            
             </ion-card>
-
+ 
       </ion-item>
+
+  
 
 </ion-content>

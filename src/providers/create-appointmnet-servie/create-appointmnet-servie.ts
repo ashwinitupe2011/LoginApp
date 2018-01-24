@@ -94,7 +94,7 @@ export class CreateAppointmnetServieProvider {
       {unitNo:1,
         request:"getTimeSlotsRequest",
       unique_token:123456,
-      appDate :"16-Jan-2018",
+      appDate :"23-Jan-2018",
       doctorID : "183"
      })
     console.log(data);
@@ -111,5 +111,10 @@ export class CreateAppointmnetServieProvider {
               resolve(this.doctorTimeSlotList);
             });
         });
+  }
+
+  createPatientApointment()
+  {
+
   }
 }

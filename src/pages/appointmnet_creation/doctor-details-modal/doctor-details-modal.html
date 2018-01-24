@@ -18,7 +18,7 @@
   <ion-navbar>
       <ion-title>ModalPage</ion-title>
       <ion-buttons end>
-      <button ion-button (click)="closeModal(values)">Close</button>
+      <button ion-button (click)="closeModal(123)">Close</button>
       </ion-buttons>
   </ion-navbar>
   
@@ -42,7 +42,7 @@
   <ion-item>
     <ion-label floating >Select Doctor Name</ion-label>
     <ion-select  cancelText="Cancel" okText="OK">
-      <ion-option *ngFor="let docName of doctorName"  >{{ docName.doctorName }}</ion-option>
+      <ion-option  (ionChange)="optionsFn();" *ngFor="let docName of doctorName"  >{{ docName.doctorName }}</ion-option>
     </ion-select>
   </ion-item>
 </ion-content>
