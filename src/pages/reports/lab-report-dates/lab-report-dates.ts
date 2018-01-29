@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map'
 import { LabReportDetailsPage } from '../lab-report-details/lab-report-details'
+import { LoadingController } from 'ionic-angular';
 // import { LabReportTestParametersPage } from '../lab-report-test-parameters/lab-report-test-parameters'
 
 /**
@@ -20,8 +21,11 @@ import { LabReportDetailsPage } from '../lab-report-details/lab-report-details'
 export class LabReportDatesPage {
 
   information: any[];
+ loader = this.loadingController.create({
+    content: "your message"
+  });
   
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http) {
+  constructor(public navCtrl: NavController,public loadingController: LoadingController,public navParams: NavParams,private http: Http) {
   }
 
   callPostData()
@@ -30,6 +34,7 @@ export class LabReportDatesPage {
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
 
+    this.loader.present();
     let options = new RequestOptions({method:"POST",headers:headers})
     let data = JSON.stringify(
       {unitNo:1,
@@ -45,6 +50,7 @@ export class LabReportDatesPage {
     {
       this.information = res;
       console.log("REE"+res);
+      this.loader.dismiss();
     },
   (err) =>{
   });
